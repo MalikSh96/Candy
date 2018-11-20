@@ -30,7 +30,7 @@ public class UserFacadeTest {
     }
 
     @Test
-    //@Disabled
+    @Disabled
     public void testCreateUser() {
         Role userRole = new Role("user");
         User user = new User("jUnitFirst", "jUnitLast", "jUnit@jUnit.jUnit", "junittest", "12345678", "JUnitHagen", "jUnitStreet 2.th", "2400");
