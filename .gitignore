@@ -62,6 +62,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-#Candy\src\main\resources\META-INF/persistence.xml
+Candy\src\main\resources\META-INF/persistence.xml
 
 # End of https://www.gitignore.io/api/macos,windows,netbeans
