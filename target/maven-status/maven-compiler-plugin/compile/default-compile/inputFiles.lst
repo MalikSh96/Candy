@@ -3,12 +3,14 @@ C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\entity\Ro
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\exceptions\NotFoundException.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\entity\CandyType.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\security\SharedSecret.java
+C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\facade\CandyFacade.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\security\LoginEndpoint.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\entity\UserOrder.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\entity\Orderline.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\security\JWTAuthenticationFilter.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\exceptions\GenericExceptionMapper.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\cors\CorsRequestFilter.java
+C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\entity\Reviews.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\entity\Shop.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\exceptions\AuthenticationException.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\entity\User.java

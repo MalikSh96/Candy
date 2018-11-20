@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 /**
@@ -24,7 +25,7 @@ public class Reviews implements Serializable {
     private String review;
     private int rating;
 
-    @OneToMany(cascade = CascadeType.PERSIST)
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private Shop shop;
     
     public Reviews() {
@@ -70,6 +71,15 @@ public class Reviews implements Serializable {
         this.shopName = shopName;
     }
 
+    public Shop getShop() {
+        return shop;
+    }
+
+    public void setShop(Shop shop) {
+        this.shop = shop;
+    }
+
+    
     
     //--------------------------------------------------------------------------
     @Override

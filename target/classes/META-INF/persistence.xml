@@ -3,6 +3,12 @@
   <persistence-unit name="persistence" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>entity.Reviews</class>
+    <class>entity.CandyType</class>
+    <class>entity.Orderline</class>
+    <class>entity.Role</class>
+    <class>entity.Shop</class>
+    <class>entity.User</class>
+    <class>entity.UserOrder</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/candydummy"/>

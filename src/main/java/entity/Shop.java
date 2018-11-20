@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -29,9 +30,11 @@ public class Shop implements Serializable {
     
     private int averageRating;
     
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @OneToMany(cascade = CascadeType.PERSIST)
     List<Reviews> reviews = new ArrayList<>();
     
+    @OneToMany(cascade = CascadeType.PERSIST)
+    List<CandyType> sortiment = new ArrayList<>(); 
     
     //--------------------------------------------------------------------------
     //Neceassary constructors
@@ -113,6 +116,15 @@ public class Shop implements Serializable {
     {
         reviews.add(review);
     }
+
+    public List<CandyType> getSortiment() {
+        return sortiment;
+    }
+
+    public void setSortiment(List<CandyType> candytype) {
+        this.sortiment = candytype;
+    }
+    
     
     
     //--------------------------------------------------------------------------
