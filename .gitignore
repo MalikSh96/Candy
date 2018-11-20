@@ -62,8 +62,10 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+
 #Other Sources
 
 **/persistence.xml
 
 # End of https://www.gitignore.io/api/macos,windows,netbeans
+/target/
