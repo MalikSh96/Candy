@@ -1,9 +1,15 @@
 package main;
 
 import entity.CandyType;
+import entity.Orderline;
 import entity.Role;
+import entity.Shop;
 import entity.User;
+import entity.UserOrder;
 import facade.CandyFacade;
+import facade.OrderFacade;
+import facade.OrderlineFacade;
+import facade.ShopFacade;
 import facade.UserFacade;
 
 /**
@@ -22,9 +28,32 @@ public class Main {
 
         //----------------------------------------------------------------------
         //CandyFacade
-        CandyFacade cfacade = new CandyFacade();
-        CandyType type = new CandyType("mainJordbær");
-        System.out.println("CreateCandy: " + cfacade.addCandy(type));
+//        CandyFacade cfacade = new CandyFacade();
+//        CandyType type = new CandyType("mainJordbær");
+//        System.out.println("CreateCandy: " + cfacade.addShop(type));
+
+
+        //----------------------------------------------------------------------
+        //OrderFacade
+//        OrderFacade of = new OrderFacade();
+//        UserOrder uo = new UserOrder(user);
+//        System.out.println("of " + of.createOrder(uo));
+        
+        
+        
+        //----------------------------------------------------------------------
+        //Orderline facade
+//        OrderlineFacade olf = new OrderlineFacade();
+//        Orderline ol = new Orderline(10, cfacade.findCandyById(1));
+//        olf.createOrderline(ol);
+        
+        
+        //----------------------------------------------------------------------
+        //ShopFacade
+        ShopFacade sf = new ShopFacade();
+        Shop shop = new Shop("mainShop", "mainShopAddress", 1234, 10);
+        System.out.println("sf " + sf.addShop(shop));
+        
     }
     
 }

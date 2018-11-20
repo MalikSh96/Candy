@@ -4,13 +4,16 @@ facade\CandyFacade.class
 exceptions\GenericExceptionMapper.class
 security\JWTSecurityContext.class
 entity\Reviews_.class
+facade\OrderlineFacade.class
 security\SharedSecret.class
 entity\UserOrder_.class
 entity\CandyType_.class
 entity\User_.class
+calculator\Calculator.class
 main\Main.class
 entity\Role_.class
 entity\Orderline.class
+facade\OrderFacade.class
 facade\UserFacade.class
 security\UserPrincipal.class
 entity\Reviews.class
