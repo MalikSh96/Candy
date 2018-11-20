@@ -1,10 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package entity;
 
+import calculator.Calculator;
 import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,15 +20,36 @@ public class Orderline implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    private int totalPricePrCandyType;
+    
     @ManyToOne
     private UserOrder userOrder; /*<-- is the customers id from that originates from the customerorder table, customer_id is the 
     id that identifies the "original id" (also customerorder tabel) */
 
+    @ManyToOne
+    private CandyType type = new CandyType();
     
+    private int totalWeight;
+    private Shop shop;
+
+
     //--------------------------------------------------------------------------
     public Orderline() {
     }
     //implement necessary constructors
+
+    public Orderline(int totalPricePrCandyType, UserOrder userOrder, int totalWeight) {
+        this.totalPricePrCandyType = totalPricePrCandyType;
+        this.userOrder = userOrder;
+        this.totalWeight = totalWeight;
+    }
+
+    public Orderline(int totalWeight, CandyType type)
+    {
+        this.type = type;
+        this.totalWeight = totalWeight;
+    }
+    
     
     
     //--------------------------------------------------------------------------    
@@ -52,7 +69,30 @@ public class Orderline implements Serializable {
         this.userOrder = UserOrder;
     }
 
-    
+    public CandyType getType() {
+        return type;
+    }
+
+    public void setType(CandyType type) {
+        this.type = type;
+    }
+
+    public int getTotalWeight() {
+        return totalWeight;
+    }
+
+    public void setTotalWeight(int weight) {
+        this.totalWeight = weight;
+    }
+
+    public int getTotalPricePrCandyType() {
+        return totalPricePrCandyType;
+    }
+
+    public void setTotalPricePrCandyType(int totalPricePrCandyType) {
+        this.totalPricePrCandyType = totalPricePrCandyType;
+    }
+
     
     //--------------------------------------------------------------------------
     @Override

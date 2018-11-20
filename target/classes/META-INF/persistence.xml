@@ -2,6 +2,16 @@
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
   <persistence-unit name="persistence" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+<<<<<<< HEAD
+=======
+    <class>entity.Reviews</class>
+    <class>entity.CandyType</class>
+    <class>entity.Orderline</class>
+    <class>entity.Role</class>
+    <class>entity.Shop</class>
+    <class>entity.User</class>
+    <class>entity.UserOrder</class>
+>>>>>>> 803baf377b864de80d01769de41e1f8383eb2d55
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/candydummy?zeroDateTimeBehavior=convertToNull"/>

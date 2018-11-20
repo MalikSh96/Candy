@@ -46,7 +46,9 @@ public class User implements Serializable {
     private String password;
     
     private String phone;
+    private String city;
     private String address;
+    private String zip;
     
     private int balance;
     
@@ -66,7 +68,8 @@ public class User implements Serializable {
     }
 
     //Used when creating a user, these infos is important to fill out
-    public User(String firstName, String lastName, String email, String password, String phone, String address) {
+    public User(String firstName, String lastName, String email, String password, String phone,
+            String city, String address, String zip) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -74,7 +77,9 @@ public class User implements Serializable {
         String hash = BCrypt.hashpw(password, salt);
         this.password = hash;
         this.phone = phone;
+        this.city = city;
         this.address = address;
+        this.zip = zip;
     }
     
     public User(String email, String userPass) {
@@ -161,6 +166,22 @@ public class User implements Serializable {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getZip() {
+        return zip;
+    }
+
+    public void setZip(String zip) {
+        this.zip = zip;
     }
 
     public int getBalance() {

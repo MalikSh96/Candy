@@ -62,6 +62,14 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+<<<<<<< HEAD
+=======
+#Other Sources
+
+**/persistence.xml
+
+
+>>>>>>> 803baf377b864de80d01769de41e1f8383eb2d55
 
 #Other Sources
 
