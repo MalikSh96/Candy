@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package facade;
 
 import entity.Role;
@@ -5,7 +10,6 @@ import entity.User;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.junit.jupiter.api.Disabled;
 
 /**
  *
@@ -23,17 +27,14 @@ public class UserFacadeTest {
     }
 
     @Test
-    @Disabled
     public void testGetInstance() {
     }
 
     @Test
-    @Disabled
     public void testGetVerifiedUser() throws Exception {
     }
 
     @Test
-    //@Disabled
     public void testCreateUser() {
         Role userRole = new Role("user");
         User user = new User("jUnitFirst", "jUnitLast", "jUnit@jUnit.jUnit", "junittest", "12345678", "jUnitStreet 2400");
@@ -44,9 +45,7 @@ public class UserFacadeTest {
         assertNotNull(checkUser);
     }
 
-
     @Test
-    @Disabled
     public void testFindUser() {
     }
     
