@@ -9,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
 /**
@@ -16,6 +18,8 @@ import javax.persistence.OneToMany;
  * @author malik
  */
 @Entity
+@NamedQueries({
+    @NamedQuery(name = "Shop.findAllByPostalCode", query = "SELECT s FROM Shop s where s.shopPostalCode = :shopPostalCode")})
 public class Shop implements Serializable {
 
     private static final long serialVersionUID = 1L;
