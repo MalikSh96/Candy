@@ -32,6 +32,9 @@ public class Shop implements Serializable {
     private int shopPostalCode;
     private int price;
     
+    private int phone;
+    private String email;
+    
     private int averageRating;
     
     @OneToMany(cascade = CascadeType.PERSIST)
@@ -46,11 +49,13 @@ public class Shop implements Serializable {
     public Shop() {
     }
 
-    public Shop(String shopName, String shopAddress, int shopPostalCode, int price) {
+    public Shop(String shopName, String shopAddress, int shopPostalCode, int price, int phone, String email) {
         this.shopName = shopName;
         this.shopAddress = shopAddress;
         this.shopPostalCode = shopPostalCode;
         this.price = price;
+        this.phone = phone;
+        this.email = email;
     }
 
     

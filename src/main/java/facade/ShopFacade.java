@@ -34,10 +34,18 @@ public class ShopFacade {
     {
         List<Shop> shopsByPostalCode = new ArrayList<>();
         System.out.println("Zip" + postalCode);
-        Query query = factory.createEntityManager().createQuery("SELECT NEW mappers.ShopInfo(s.shopName, s.shopAddress, s.shopPostalCode) FROM Shop AS s where s.shopPostalCode = :shopPostalCode");
+        Query query = factory.createEntityManager().createQuery("SELECT NEW mappers.ShopInfo(s.shopName, s.shopAddress, s.shopPostalCode, s.phone, s.email) FROM Shop AS s where s.shopPostalCode = :shopPostalCode");
         query.setParameter("shopPostalCode", postalCode);
         shopsByPostalCode = query.getResultList();
         return shopsByPostalCode;
+    }
+    
+    public List<Shop> getAllShops() 
+    {
+        List<Shop> allShops = new ArrayList<>();
+        Query query = factory.createEntityManager().createQuery("SELECT NEW mappers.ShopInfo(s.shopName, s.shopAddress, s.shopPostalCode, s.phone, s.email) FROM Shop AS s");
+        allShops = query.getResultList();
+        return allShops;
     }
     
 }

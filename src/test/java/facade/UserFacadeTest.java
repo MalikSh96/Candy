@@ -3,6 +3,9 @@ package facade;
 
 import entity.Role;
 import entity.User;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.jupiter.api.Assertions;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -16,6 +19,10 @@ public class UserFacadeTest {
     private UserFacade uf = new UserFacade();
     
     public UserFacadeTest() {
+    }
+
+    @Before
+    public void setUp() throws Exception {
     }
     
 
@@ -46,6 +53,28 @@ public class UserFacadeTest {
     public void testFindUser() {
         User u = uf.findUser("jUnit@jUnit.jUnit");
         assertNotNull(u);
+    }
+
+    @Test
+    @Disabled
+    public void testEditUser() {
+        User u = uf.findUser("jUnit@jUnit.jUnit");
+        System.out.println("first " + u.getBalance());
+        u.setBalance(100);
+        uf.editUser(u);
+        int actual = u.getBalance();
+        int expected = 100;
+        System.out.println("last " + u.getBalance());
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    @Disabled
+    public void testGetAllUsers() {
+        int expected = 2;
+        int actual = uf.getAllUsers().size();
+        System.out.println("size " + uf.getAllUsers());
+        Assertions.assertEquals(expected, actual);
     }
     
 }

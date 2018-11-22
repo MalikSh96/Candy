@@ -26,9 +26,9 @@ public class ShopFacadeTest {
     @Test
     @Disabled
     public void testAddShop() {        
-        Shop shop1 = new Shop("jUnitShop", "jUnitShopStreet", 4321, 10);
-        Shop shop2 = new Shop("jUnitShop2", "jUnitSHopStreet", 4321, 15);
-        Shop shop3 = new Shop("jUnitShop3", "jUnitShopSideStreet", 1234, 5);
+        Shop shop1 = new Shop("jUnitShop", "jUnitShopStreet", 4321, 10, 12345678, "jUnitShop@jUnitShop.shop");
+        Shop shop2 = new Shop("jUnitShop2", "jUnitShopStreet", 4321, 15, 87654321, "jUnitShop2@jUnitShop2.shop2");
+        Shop shop3 = new Shop("jUnitShop3", "jUnitShopSideStreet", 1234, 5, 43215678, "jUnitShop3@jUnitSHop3.shop3");
         
         sf.addShop(shop1);
         sf.addShop(shop2);
@@ -47,6 +47,14 @@ public class ShopFacadeTest {
         System.out.println("Actual " + actual);
         int expected = 2;
         
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testGetAllShops() {
+        int expected = 3;
+        int actual = sf.getAllShops().size();
+        System.out.println("size " + sf.getAllShops());
         Assertions.assertEquals(expected, actual);
     }
     

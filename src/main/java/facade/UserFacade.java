@@ -2,9 +2,12 @@ package facade;
 
 import entity.User;
 import exceptions.AuthenticationException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 
 /**
  *
@@ -57,23 +60,6 @@ public class UserFacade {
         }
     }
     
-//    public User findUser(int id) {
-//        //EntityManager manager = getEntityManager();
-//        EntityManager manager = factory.createEntityManager();
-//        User u = null;
-//        
-//        try
-//        {
-//            manager.getTransaction().begin();
-//            u = manager.find(User.class, id);
-//            manager.getTransaction().commit();
-//            return u;
-//        }
-//        finally
-//        {
-//            manager.close();
-//        }
-//    }
     
     public User findUser(String email) {
         //EntityManager manager = getEntityManager();
@@ -92,4 +78,54 @@ public class UserFacade {
             manager.close();
         }
     }
+    
+    public User editUser(User user) 
+    {
+        EntityManager manager = factory.createEntityManager();
+        
+        User u = null;
+        
+        try
+        {
+            manager.getTransaction().begin();
+            u = manager.find(User.class, user.getEmail());
+            System.out.println("You are here " + u);
+            if(u != null)
+            {
+                manager.merge(user);
+            }
+            manager.getTransaction().commit();
+            return u;
+        }
+        finally
+        {
+            manager.close();
+        }
+    }
+    
+    public List<User> getAllUsers() 
+    {
+        List<User> getUsers = new ArrayList<>();
+        Query query = factory.createEntityManager().createQuery("SELECT NEW mappers.UserInfo(u.email, u.firstName, u.lastName) FROM User AS u");
+        getUsers = query.getResultList();
+        return getUsers;
+    }
 }
+
+//    public User findUser(int id) {
+//        //EntityManager manager = getEntityManager();
+//        EntityManager manager = factory.createEntityManager();
+//        User u = null;
+//        
+//        try
+//        {
+//            manager.getTransaction().begin();
+//            u = manager.find(User.class, id);
+//            manager.getTransaction().commit();
+//            return u;
+//        }
+//        finally
+//        {
+//            manager.close();
+//        }
+//    }

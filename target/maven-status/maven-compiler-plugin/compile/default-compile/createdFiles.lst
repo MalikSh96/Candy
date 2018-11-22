@@ -5,6 +5,7 @@ exceptions\GenericExceptionMapper.class
 security\JWTSecurityContext.class
 entity\Reviews_.class
 facade\OrderlineFacade.class
+mappers\UserInfo.class
 security\SharedSecret.class
 entity\UserOrder_.class
 entity\CandyType_.class
@@ -21,6 +22,7 @@ entity\Orderline_.class
 exceptions\NotFoundException.class
 entity\UserOrder.class
 exceptions\AuthenticationException.class
+mappers\CandyInfo.class
 facade\ShopFacade.class
 security\LoginEndpoint.class
 mappers\ShopInfo.class

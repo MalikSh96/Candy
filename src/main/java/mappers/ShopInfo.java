@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package mappers;
 
 /**
@@ -13,15 +8,19 @@ public class ShopInfo {
     private String shopName;
     private String shopAddress;
     private int shopPostalCode;
+    private int phone;
+    private String email;
 
-    public ShopInfo(String shopName, String shopAddress, int shopPostalCode) {
+    public ShopInfo(String shopName, String shopAddress, int shopPostalCode, int phone, String email) {
         this.shopName = shopName;
         this.shopAddress = shopAddress;
         this.shopPostalCode = shopPostalCode;
+        this.phone = phone;
+        this.email = email;
     }
 
     @Override
     public String toString() {
-        return "ShopInf: " + "shopName: " + shopName + ", shopAddress: " + shopAddress + ", shopPostalCode: " + shopPostalCode + '\n';
+        return "ShopInfo{" + "shopName=" + shopName + ", shopAddress=" + shopAddress + ", shopPostalCode=" + shopPostalCode + ", phone=" + phone + ", email=" + email + '}';
     }
 }
