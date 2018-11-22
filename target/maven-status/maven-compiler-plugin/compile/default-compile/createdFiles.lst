@@ -21,7 +21,9 @@ entity\Orderline_.class
 exceptions\NotFoundException.class
 entity\UserOrder.class
 exceptions\AuthenticationException.class
+facade\ShopFacade.class
 security\LoginEndpoint.class
+mappers\ShopInfo.class
 security\JWTAuthenticationFilter.class
 cors\CorsRequestFilter.class
 entity\User.class

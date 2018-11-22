@@ -32,13 +32,13 @@ public class UserFacadeTest {
     @Test
     @Disabled
     public void testCreateUser() {
-//        Role userRole = new Role("user");
-//        User user = new User("jUnitFirst", "jUnitLast", "jUnit@jUnit.jUnit", "junittest", "12345678", "JUnitHagen", "jUnitStreet 2.th", 1234);
-//        user.addRole(userRole);
-//        uf.createUser(user);
-//        
-//        User checkUser = uf.findUser("jUnit@jUnit.jUnit");
-//        assertNotNull(checkUser);
+        Role userRole = new Role("user");
+        User user = new User("jUnitFirst", "jUnitLast", "jUnit@jUnit.jUnit", "junittest", "12345678", "JUnitHagen", "jUnitStreet 2.th", 1234);
+        user.addRole(userRole);
+        uf.createUser(user);
+        
+        User checkUser = uf.findUser("jUnit@jUnit.jUnit");
+        assertNotNull(checkUser);
     }
 
     @Test

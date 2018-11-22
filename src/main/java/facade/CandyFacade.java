@@ -6,9 +6,12 @@
 package facade;
 
 import entity.CandyType;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 
 /**
  *
@@ -48,4 +51,11 @@ public class CandyFacade {
         }
     }
 
+    public List<CandyType> getAllCandy() 
+    {
+        List<CandyType> getAllCandy = new ArrayList<>();
+        Query query = factory.createEntityManager().createQuery("SELECT NEW mappers.CandyInfo(c.candyName) FROM CandyType AS c");
+        getAllCandy = query.getResultList();
+        return getAllCandy;
+    }
 }
