@@ -26,7 +26,7 @@ public class CandyType implements Serializable {
     
     private String candyName; 
     //private String description; //is candy description needed?
-    private int weight; //should be weight pr unit, remember!
+//    private int weight; //should be weight pr unit, remember!
 
     @OneToMany(cascade = CascadeType.PERSIST)
     private List<Orderline> line = new ArrayList<>();
@@ -34,9 +34,9 @@ public class CandyType implements Serializable {
     public CandyType() {
     }
 
-    public CandyType(String candyName, int weight) {
+    public CandyType(String candyName) {
         this.candyName = candyName;
-        this.weight = weight;
+
     }
     
     
@@ -55,14 +55,6 @@ public class CandyType implements Serializable {
 
     public void setCandyName(String candyName) {
         this.candyName = candyName;
-    }
-
-    public int getPrice() {
-        return weight;
-    }
-
-    public void setPrice(int price) {
-        this.weight = price;
     }
 
     public List<Orderline> getLine() {

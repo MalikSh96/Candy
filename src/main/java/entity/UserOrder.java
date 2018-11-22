@@ -1,5 +1,6 @@
 package entity;
 
+import calculator.Calculator;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -37,7 +38,8 @@ public class UserOrder implements Serializable {
     @OneToMany(cascade = CascadeType.PERSIST)
     private List<Orderline> orderLine = new ArrayList<>();
     
-    
+    private int totalPrice;
+
     //--------------------------------------------------------------------------
     public UserOrder() {
     }
@@ -49,6 +51,10 @@ public class UserOrder implements Serializable {
 
     public UserOrder(Date date, User user) {
         this.date = date;
+        this.user = user;
+    }
+
+    public UserOrder(User user) {
         this.user = user;
     }
 
@@ -84,6 +90,14 @@ public class UserOrder implements Serializable {
 
     public void setOrderLine(List<Orderline> orderLine) {
         this.orderLine = orderLine;
+    }
+
+    public int getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(int totalPrice) {
+        this.totalPrice = totalPrice;
     }
 
     
