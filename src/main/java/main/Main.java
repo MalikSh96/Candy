@@ -30,7 +30,7 @@ public class Main {
         //CandyFacade
 //        CandyFacade cfacade = new CandyFacade();
 //        CandyType type = new CandyType("mainJordbær");
-//        System.out.println("CreateCandy: " + cfacade.addShop(type));
+//        System.out.println("CreateCandy: " + cfacade.addCandy(type));
 
 
         //----------------------------------------------------------------------

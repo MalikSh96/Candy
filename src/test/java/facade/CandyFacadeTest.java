@@ -26,15 +26,15 @@ public class CandyFacadeTest {
     @Test
     @Disabled
     public void testAddCandy() {
-//        CandyType ct = new CandyType("JUnitStrawberry");
-//        cf.addCandy(ct);
-//        
-//        CandyType checkCandy = cf.findCandyById(2);
-//        assertNotNull(true);
+        CandyType ct = new CandyType("JUnitStrawberry");
+        cf.addCandy(ct);
+        
+        //CandyType checkCandy = cf.findCandyById(2);
+        assertNotNull(true);
     }
 
     @Test
-    //@Disabled
+    @Disabled
     public void testFindCandyById()
     {
         CandyType ct = cf.findCandyById(2);

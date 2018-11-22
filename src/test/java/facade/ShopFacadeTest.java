@@ -26,15 +26,15 @@ public class ShopFacadeTest {
     @Test
     @Disabled
     public void testAddShop() {        
-//        Shop shop1 = new Shop("jUnitShop", "jUnitShopStreet", 4321, 10);
-//        Shop shop2 = new Shop("jUnitShop2", "jUnitSHopStreet", 4321, 15);
-//        Shop shop3 = new Shop("jUnitShop3", "jUnitShopSideStreet", 1234, 5);
-//        
-//        sf.addShop(shop1);
-//        sf.addShop(shop2);
-//        sf.addShop(shop3);
-//        
-//        Assertions.assertEquals(3, 3);
+        Shop shop1 = new Shop("jUnitShop", "jUnitShopStreet", 4321, 10);
+        Shop shop2 = new Shop("jUnitShop2", "jUnitSHopStreet", 4321, 15);
+        Shop shop3 = new Shop("jUnitShop3", "jUnitShopSideStreet", 1234, 5);
+        
+        sf.addShop(shop1);
+        sf.addShop(shop2);
+        sf.addShop(shop3);
+        
+        Assertions.assertEquals(3, 3);
     }
 
     @Test

@@ -1,24 +1,17 @@
 package entity;
 
 import entity.Role;
+import entity.UserOrder;
 import javax.annotation.Generated;
 import javax.persistence.metamodel.ListAttribute;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-<<<<<<< HEAD
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2018-11-20T14:26:11")
-=======
-<<<<<<< HEAD
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2018-11-20T09:55:29")
-=======
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2018-11-20T13:22:28")
->>>>>>> 803baf377b864de80d01769de41e1f8383eb2d55
->>>>>>> 0dc72fb017f04cf8eb6efe3a89883643c00d1a2a
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2018-11-22T11:03:02")
 @StaticMetamodel(User.class)
 public class User_ { 
 
-    public static volatile SingularAttribute<User, String> zip;
+    public static volatile SingularAttribute<User, Integer> zip;
     public static volatile SingularAttribute<User, String> firstName;
     public static volatile SingularAttribute<User, String> lastName;
     public static volatile SingularAttribute<User, String> password;
@@ -26,7 +19,7 @@ public class User_ {
     public static volatile SingularAttribute<User, Integer> balance;
     public static volatile SingularAttribute<User, String> phone;
     public static volatile SingularAttribute<User, String> city;
-    public static volatile SingularAttribute<User, Integer> id;
+    public static volatile ListAttribute<User, UserOrder> userOrder;
     public static volatile ListAttribute<User, Role> roleList;
     public static volatile SingularAttribute<User, String> email;
 
