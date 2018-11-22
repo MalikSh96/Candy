@@ -48,7 +48,7 @@ public class User implements Serializable {
     private String phone;
     private String city;
     private String address;
-    private String zip;
+    private int zip;
     
     private int balance;
     
@@ -69,7 +69,7 @@ public class User implements Serializable {
 
     //Used when creating a user, these infos is important to fill out
     public User(String firstName, String lastName, String email, String password, String phone,
-            String city, String address, String zip) {
+            String city, String address, int zip) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -176,13 +176,14 @@ public class User implements Serializable {
         this.city = city;
     }
 
-    public String getZip() {
+    public int getZip() {
         return zip;
     }
 
-    public void setZip(String zip) {
+    public void setZip(int zip) {
         this.zip = zip;
     }
+
 
     public int getBalance() {
         return balance;
