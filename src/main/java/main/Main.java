@@ -39,8 +39,8 @@ public class Main {
         
         //----------------------------------------------------------------------
         //Orderline facade
-//        OrderlineFacade olf = new OrderlineFacade();
-//        Orderline ol = new Orderline(10, cfacade.findCandyById(1));
+        OrderlineFacade olf = new OrderlineFacade();
+//        Orderline ol = new Orderline(519, cfacade.findCandyById(1));
 //        olf.createOrderline(ol);
         
         
@@ -53,7 +53,7 @@ public class Main {
 //        System.out.println("sf " + sf.addShop(shop));
 //
 //        System.out.println("Find by zip " + sf.getShopsByPostalCode(1234));
-        
+        System.out.println(olf.getAllOrderlines().toString());
     }
     
 }

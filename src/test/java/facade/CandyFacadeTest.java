@@ -34,7 +34,7 @@ public class CandyFacadeTest {
     }
 
     @Test
-    //@Disabled
+    @Disabled
     public void testFindCandyById()
     {
         CandyType ct = cf.findCandyById(2);
