@@ -12,10 +12,6 @@ import facade.OrderlineFacade;
 import facade.ShopFacade;
 import facade.UserFacade;
 
-/**
- *
- * @author malik
- */
 public class Main {
     public static void main(String[] args) {
         //----------------------------------------------------------------------
