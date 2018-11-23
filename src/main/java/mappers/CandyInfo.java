@@ -24,8 +24,6 @@ public class CandyInfo {
 
        this.id = c.getId();
        this.candyName = c.getCandyName();
-        
-//         new CandyInfo(id, candyName);
     }
 
     @Override

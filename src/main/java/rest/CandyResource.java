@@ -62,21 +62,18 @@ public class CandyResource {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistence");
 
     }
-
+//----------------------------- get candy out with id ----------------------
     @GET
     @Path("{id}") //with a sematic url parameter
     @Produces(MediaType.APPLICATION_JSON)
     public String getCandyById(@PathParam("id") int id) throws NotFoundException {
         CandyType p = cf.findCandyById(id);
-//        if (p == null) {
-//            throw new WebApplicationException(Response.Status.NOT_FOUND); //look for 404 not found in the browser.
-//        }
 
         if (p == null) {
             throw new NotFoundException("Can't found candy");
         }
         return gson.toJson(p);
-        //Response.ok().entity(JSONConverter.getJSONFromPerson());
+       
     }
 
     
@@ -84,7 +81,7 @@ public class CandyResource {
  
     private class Call implements Callable<CandyInfo> {
         
-        private CandyFacade cf;
+        
         private final CandyType candyName;
       
         public Call(CandyType candyName) {
@@ -98,7 +95,7 @@ public class CandyResource {
             return candyInfo;
         }
     }
-    
+    //-------------------------- get allcandy out ----------------------
     @GET
     @Path("/allcandy")
     @Produces(MediaType.APPLICATION_JSON)
