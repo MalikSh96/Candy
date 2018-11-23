@@ -1,6 +1,5 @@
 package facade;
 
-import entity.Cityinfo;
 import entity.Shop;
 import java.util.ArrayList;
 import java.util.List;
