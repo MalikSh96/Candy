@@ -5,23 +5,37 @@
  */
 package mappers;
 
-/**
- *
- * @author malik
- */
+import entity.Shop;
+
+
+
 public class ShopInfo {
+    private int id;
     private String shopName;
     private String shopAddress;
     private int shopPostalCode;
 
-    public ShopInfo(String shopName, String shopAddress, int shopPostalCode) {
+    public ShopInfo(int id, String shopName, String shopAddress, int shopPostalCode) {
+        this.id = id;
         this.shopName = shopName;
         this.shopAddress = shopAddress;
         this.shopPostalCode = shopPostalCode;
     }
+    
+    
+    public ShopInfo(Shop s){
+        this.id = s.getId();
+        this.shopName = s.getShopName();
+        this.shopAddress = s.getShopAddress();
+        this.shopPostalCode = s.getShopPostalCode();
+    
+    }
+    
 
     @Override
     public String toString() {
-        return "ShopInf: " + "shopName: " + shopName + ", shopAddress: " + shopAddress + ", shopPostalCode: " + shopPostalCode + '\n';
+        return "{" + "shopName: " + shopName + ", shopAddress: " + shopAddress + ", shopPostalCode: " + shopPostalCode + '}';
     }
+
+    
 }

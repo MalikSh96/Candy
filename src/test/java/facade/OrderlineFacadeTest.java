@@ -30,9 +30,9 @@ public class OrderlineFacadeTest {
     @Test
     @Disabled
     public void testCreateOrderline() {
-//        Orderline ol = new Orderline(10, cf.findCandyById(1));
-//        olf.createOrderline(ol);
-//        
-//        assertNotNull(ol);
+        Orderline ol = new Orderline(10, cf.findCandyById(1));
+        olf.createOrderline(ol);
+        
+        assertNotNull(ol);
     }
 }

@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -29,17 +30,18 @@ public class Shop implements Serializable {
 
     private String shopName;
     private String shopAddress;
+   
     private int shopPostalCode;
     private int price;
-    
+
     private int averageRating;
-    
+
     @OneToMany(cascade = CascadeType.PERSIST)
     List<Reviews> reviews = new ArrayList<>();
-    
+
     @OneToMany(cascade = CascadeType.PERSIST)
-    List<CandyType> sortiment = new ArrayList<>(); 
-    
+    List<CandyType> sortiment = new ArrayList<>();
+
     //--------------------------------------------------------------------------
     //Neceassary constructors
     //Empty constructors avoids problems
@@ -53,7 +55,6 @@ public class Shop implements Serializable {
         this.price = price;
     }
 
-    
     //--------------------------------------------------------------------------
     //Getters and setters
     public Integer getId() {
@@ -105,7 +106,7 @@ public class Shop implements Serializable {
         for (Reviews review : reviews) {
             r += review.getRating();
         }
-        this.averageRating = (r/reviews.size());
+        this.averageRating = (r / reviews.size());
     }
 
     public List<Reviews> getReviews() {
@@ -116,8 +117,7 @@ public class Shop implements Serializable {
         this.reviews = reviews;
     }
 
-    public void addReviews(Reviews review)
-    {
+    public void addReviews(Reviews review) {
         reviews.add(review);
     }
 
@@ -128,9 +128,7 @@ public class Shop implements Serializable {
     public void setSortiment(List<CandyType> candytype) {
         this.sortiment = candytype;
     }
-    
-    
-    
+
     //--------------------------------------------------------------------------
     //Java generated code
     @Override
@@ -139,7 +137,7 @@ public class Shop implements Serializable {
         hash += (id != null ? id.hashCode() : 0);
         return hash;
     }
-    
+
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
@@ -157,5 +155,5 @@ public class Shop implements Serializable {
     public String toString() {
         return "entity.Shop[ id=" + id + " ]";
     }
-    
+
 }

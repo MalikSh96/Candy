@@ -26,11 +26,11 @@ public class OrderFacadeTest {
     @Test
     @Disabled
     public void testCreateOrder() {
-//        User user = new User("jUnitFirst", "jUnitLast", "junit@junitjunit.junit", "junitpassword", "43215678", "Jnit", "jUnitSideStreet", 4321);
-//        uf.createUser(user);
-//        UserOrder uo = new UserOrder(user);
-//        of.createOrder(uo);
-//        assertNotNull(true);
+        User user = new User("jUnitFirst", "jUnitLast", "junit@junitjunit.junit", "junitpassword", "43215678", "Jnit", "jUnitSideStreet", 4321);
+        uf.createUser(user);
+        UserOrder uo = new UserOrder(user);
+        of.createOrder(uo);
+        assertNotNull(true);
     }
     
 }

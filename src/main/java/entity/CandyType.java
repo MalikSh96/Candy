@@ -89,7 +89,11 @@ public class CandyType implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.Candy[ id=" + id + " ]";
+        return "CandyType{" + "id=" + id + ", candyName=" + candyName + '}';
     }
+
+    
+
+   
     
 }

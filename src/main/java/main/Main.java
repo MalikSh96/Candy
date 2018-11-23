@@ -51,9 +51,9 @@ public class Main {
         //----------------------------------------------------------------------
         //ShopFacade
         ShopFacade sf = new ShopFacade();
-//        Shop shop = new Shop("mainShop", "mainShopAddress", 1234, 10);
-//        Shop shop = new Shop("mainShop2", "mainShopAddress2", 1234, 15);
-//        Shop shop = new Shop("mainShop3", "mainAddressShop", 4321, 5);
+//        Shop shop = new Shop("mainShop", "mainShopAddress", 3000, 10);
+//        Shop shop = new Shop("mainShop2", "mainShopAddress2", 3000, 15);
+//        Shop shop = new Shop("mainShop3", "mainAddressShop", 2800, 5);
 //        System.out.println("sf " + sf.addShop(shop));
 
 //        System.out.println("Find by zip " + sf.getShopsByPostalCode(1234));

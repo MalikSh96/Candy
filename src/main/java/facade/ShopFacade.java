@@ -1,6 +1,5 @@
 package facade;
 
-import static entity.Orderline_.type;
 import entity.Shop;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,8 +13,9 @@ import javax.persistence.Query;
  * @author malik
  */
 public class ShopFacade {
+
     private EntityManagerFactory factory = Persistence.createEntityManagerFactory("persistence");
-    
+
     public Shop addShop(Shop shop) {
         EntityManager manager = factory.createEntityManager();
         System.out.println("Before try");
@@ -30,15 +30,36 @@ public class ShopFacade {
             manager.close();
         }
     }
+
+    public Shop findShopById(int id) {
+        //EntityManager manager = getEntityManager();
+        EntityManager manager = factory.createEntityManager();
+        Shop ct = null;
+
+        try {
+            manager.getTransaction().begin();
+            ct = manager.find(Shop.class, id);
+            manager.getTransaction().commit();
+            return ct;
+        } finally {
+            manager.close();
+        }
+    }
     
-    public List<Shop> getShopsByPostalCode(int postalCode) 
-    {
+ 
+
+    public List<Shop> getShopsByPostalCode(int postalCode) {
         List<Shop> shopsByPostalCode = new ArrayList<>();
         System.out.println("Zip" + postalCode);
-        Query query = factory.createEntityManager().createQuery("SELECT NEW mappers.ShopInfo(s.shopName, s.shopAddress, s.shopPostalCode) FROM Shop AS s where s.shopPostalCode = :shopPostalCode");
+        Query query = factory.createEntityManager().createQuery("SELECT NEW mappers.ShopInfo(s) FROM Shop AS s where s.shopPostalCode = :shopPostalCode");
         query.setParameter("shopPostalCode", postalCode);
         shopsByPostalCode = query.getResultList();
         return shopsByPostalCode;
     }
-    
+    public static void main(String[] args) {
+        ShopFacade s = new ShopFacade();
+        
+        System.out.println(s.getShopsByPostalCode(3000));
+    }
+
 }
