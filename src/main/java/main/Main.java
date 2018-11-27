@@ -56,7 +56,7 @@ public class Main {
 //        Shop shop = new Shop("mainShop3", "mainAddressShop", 4321, 5);
 //        System.out.println("sf " + sf.addShop(shop));
 
-//        System.out.println("Find by zip " + sf.getShopsByPostalCode(1234));
+        System.out.println("Find by zip " + sf.getShopsByPostalCode(4321));
         
     }
     

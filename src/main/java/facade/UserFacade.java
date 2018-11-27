@@ -106,7 +106,7 @@ public class UserFacade {
     public List<User> getAllUsers() 
     {
         List<User> getUsers = new ArrayList<>();
-        Query query = factory.createEntityManager().createQuery("SELECT NEW mappers.UserInfo(u.email, u.firstName, u.lastName) FROM User AS u");
+        Query query = factory.createEntityManager().createQuery("SELECT NEW dto.UserInfo(u) FROM User AS u");
         getUsers = query.getResultList();
         return getUsers;
     }
