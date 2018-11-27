@@ -25,7 +25,7 @@ public class ShopFacadeTest {
     }
 
     @Test
-    @Disabled
+    //@Disabled
     public void testAddShop() {        
         Shop shop1 = new Shop("jUnitShop", "jUnitShopStreet", 4321, 10, 12345678, "jUnitShop@jUnitShop.shop");
         Shop shop2 = new Shop("jUnitShop2", "jUnitShopStreet", 4321, 15, 87654321, "jUnitShop2@jUnitShop2.shop2");
@@ -39,7 +39,7 @@ public class ShopFacadeTest {
     }
 
     @Test
-    //@Disabled
+    @Disabled
     public void testGetShopsByPostalCode() {
         List<ShopInfo> s = new ArrayList<>();
         s = sf.getShopsByPostalCode(4321);
@@ -52,7 +52,7 @@ public class ShopFacadeTest {
     }
 
     @Test
-    //@Disabled
+    @Disabled
     public void testGetAllShops() {
         int expected = 3;
         int actual = sf.getAllShops().size();

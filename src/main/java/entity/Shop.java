@@ -121,7 +121,7 @@ public class Shop implements Serializable {
         this.reviews = reviews;
     }
 
-    public void addReviews(Reviews review)
+    public void addReview(Reviews review)
     {
         reviews.add(review);
     }
@@ -177,5 +177,4 @@ public class Shop implements Serializable {
     public String toString() {
         return "entity.Shop[ id=" + id + " ]";
     }
-    
 }

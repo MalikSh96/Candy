@@ -48,7 +48,7 @@ public class CandyFacadeTest {
     }
 
     @Test
-    //@Disabled
+    @Disabled
     public void testGetAllCandy() {
         
         List<CandyInfo> c = new ArrayList<>();

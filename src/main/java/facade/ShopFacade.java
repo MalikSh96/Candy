@@ -49,4 +49,21 @@ public class ShopFacade {
         return allShops;
     }
     
+    public Shop getShopById(int id) {
+        //EntityManager manager = getEntityManager();
+        EntityManager manager = factory.createEntityManager();
+        Shop s = null;
+        
+        try
+        {
+            manager.getTransaction().begin();
+            s = manager.find(Shop.class, id);
+            manager.getTransaction().commit();
+            return s;
+        }
+        finally
+        {
+            manager.close();
+        }
+    }
 }
