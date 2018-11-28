@@ -52,6 +52,7 @@ public class CandyFacade {
         }
     }
 
+
     public List<CandyInfo> getAllCandy() 
     {
         List<CandyInfo> getAllCandy = new ArrayList<>();

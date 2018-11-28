@@ -1,9 +1,10 @@
 package facade;
 
+import dto.ShopInfo;
 import entity.Shop;
 import java.util.ArrayList;
 import java.util.List;
-import dto.ShopInfo;
+
 import org.junit.Before;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
@@ -27,9 +28,10 @@ public class ShopFacadeTest {
     @Test
     //@Disabled
     public void testAddShop() {        
-        Shop shop1 = new Shop("jUnitShop", "jUnitShopStreet", 4321, 10, 12345678, "jUnitShop@jUnitShop.shop");
-        Shop shop2 = new Shop("jUnitShop2", "jUnitShopStreet", 4321, 15, 87654321, "jUnitShop2@jUnitShop2.shop2");
-        Shop shop3 = new Shop("jUnitShop3", "jUnitShopSideStreet", 1234, 5, 43215678, "jUnitShop3@jUnitSHop3.shop3");
+
+        Shop shop1 = new Shop("jUnitShop", "jUnitShopStreet", 3000, 10, 12345678, "jUnitShop@jUnitShop.shop");
+        Shop shop2 = new Shop("jUnitShop2", "jUnitShopStreet", 3000, 15, 87654321, "jUnitShop2@jUnitShop2.shop2");
+        Shop shop3 = new Shop("jUnitShop3", "jUnitShopSideStreet", 2800, 5, 43215678, "jUnitShop3@jUnitSHop3.shop3");
         
         sf.addShop(shop1);
         sf.addShop(shop2);
@@ -42,7 +44,8 @@ public class ShopFacadeTest {
     @Disabled
     public void testGetShopsByPostalCode() {
         List<ShopInfo> s = new ArrayList<>();
-        s = sf.getShopsByPostalCode(4321);
+        s = sf.getShopsByPostalCode(3000);
+
         
         int actual = s.size();
         System.out.println("Actual " + actual);

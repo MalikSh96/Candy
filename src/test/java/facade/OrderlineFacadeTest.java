@@ -36,13 +36,11 @@ public class OrderlineFacadeTest {
     @Test
     @Disabled
     public void testCreateOrderline() {
-        
         Orderline ol = new Orderline(10, cf.findCandyById(1));
         u.setEmail("jUnit@jUnit.jUnit");
         uo.setUser(u);
         ol.setUOrder(uo);
         olf.createOrderline(ol);
-        
         
         assertNotNull(ol);
     }

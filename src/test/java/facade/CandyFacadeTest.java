@@ -32,6 +32,7 @@ public class CandyFacadeTest {
     public void testAddCandy() {
         CandyType ct = new CandyType("JUnitStrawberry");
         cf.addCandy(ct);
+
         ct = new CandyType("jUnitChocolate");
         cf.addCandy(ct);
         
@@ -43,7 +44,7 @@ public class CandyFacadeTest {
     @Disabled
     public void testFindCandyById()
     {
-        CandyType ct = cf.findCandyById(2);
+        CandyType ct = cf.findCandyById(1);
         assertNotNull(ct);
     }
 
