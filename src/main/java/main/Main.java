@@ -16,11 +16,11 @@ public class Main {
     public static void main(String[] args) {
         //----------------------------------------------------------------------
         //UserFacade
-//        UserFacade facade = new UserFacade();
-//        Role userRole = new Role("user");
-//        User user = new User("mainF", "mainL", "main@main.main", "hellofrommain", "123456789", "CityHus", "mainstreet 1.tv", 2100);
-//        user.addRole(userRole);
-//        System.out.println("CreateUser: " + facade.createUser(user));
+        UserFacade facade = new UserFacade();
+        Role userRole = new Role("user");
+        User user = new User("mainF", "mainL", "main@main.main", "hellofrommain", "123456789", "CityHus", "mainstreet 1.tv", 2100);
+        user.addRole(userRole);
+        System.out.println("CreateUser: " + facade.createUser(user));
 
         //----------------------------------------------------------------------
         //CandyFacade
@@ -39,7 +39,7 @@ public class Main {
         
         //----------------------------------------------------------------------
         //Orderline facade
-        OrderlineFacade olf = new OrderlineFacade();
+//        OrderlineFacade olf = new OrderlineFacade();
 //        Orderline ol = new Orderline(519, cfacade.findCandyById(1));
 //        olf.createOrderline(ol);
         
@@ -48,12 +48,14 @@ public class Main {
         //ShopFacade
 //        ShopFacade sf = new ShopFacade();
 //        Shop shop = new Shop("mainShop", "mainShopAddress", 1234, 10);
-//        Shop shop = new Shop("mainShop2", "mainShopAddress2", 1234, 15);
-//        Shop shop = new Shop("mainShop3", "mainAddressShop", 4321, 5);
+//        Shop shop1 = new Shop("mainShop2", "mainShopAddress2", 1234, 15);
+//        Shop shop2 = new Shop("mainShop3", "mainAddressShop", 4321, 5);
 //        System.out.println("sf " + sf.addShop(shop));
+//        System.out.println("sf " + sf.addShop(shop1));
+//        System.out.println("sf " + sf.addShop(shop2));
 //
 //        System.out.println("Find by zip " + sf.getShopsByPostalCode(1234));
-        System.out.println(olf.getAllOrderlines().toString());
+    //    System.out.println(olf.getAllOrderlines().toString());
     }
     
 }
