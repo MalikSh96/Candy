@@ -3,6 +3,7 @@ package facade;
 import entity.Shop;
 import java.util.ArrayList;
 import java.util.List;
+import mappers.ShopInfo;
 import org.junit.Before;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
@@ -41,7 +42,7 @@ public class ShopFacadeTest {
     @Test
     @Disabled
     public void testGetShopsByPostalCode() {
-        List<Shop> s = new ArrayList<>();
+        List<ShopInfo> s = new ArrayList<>();
         s = sf.getShopsByPostalCode(3000);
         
         int actual = s.size();

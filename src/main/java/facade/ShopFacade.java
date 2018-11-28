@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
+import mappers.ShopInfo;
 
 /**
  *
@@ -48,18 +49,13 @@ public class ShopFacade {
     
  
 
-    public List<Shop> getShopsByPostalCode(int postalCode) {
-        List<Shop> shopsByPostalCode = new ArrayList<>();
+    public List<ShopInfo> getShopsByPostalCode(int postalCode) {
+        List<ShopInfo> shopsByPostalCode = new ArrayList<>();
         System.out.println("Zip" + postalCode);
         Query query = factory.createEntityManager().createQuery("SELECT NEW mappers.ShopInfo(s) FROM Shop AS s where s.shopPostalCode = :shopPostalCode");
         query.setParameter("shopPostalCode", postalCode);
         shopsByPostalCode = query.getResultList();
         return shopsByPostalCode;
     }
-    public static void main(String[] args) {
-        ShopFacade s = new ShopFacade();
-        
-        System.out.println(s.getShopsByPostalCode(3000));
-    }
-
+   
 }

@@ -103,7 +103,7 @@ public class ShopResource {
     @Produces(MediaType.APPLICATION_JSON)
     public String getshopposstalcode(@PathParam("postalcode") int postalcode) throws NotFoundException, InterruptedException, ExecutionException {
 
-        List<Shop> findOnPostalcode = sf.getShopsByPostalCode(postalcode);
+        List<ShopInfo> findOnPostalcode = sf.getShopsByPostalCode(postalcode);
        
 
         if (findOnPostalcode == null) {
