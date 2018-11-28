@@ -19,9 +19,8 @@ public class Reviews implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer id; //review id
     
-    private String shopName;
     private String review;
     private int rating;
 
@@ -31,8 +30,8 @@ public class Reviews implements Serializable {
     public Reviews() {
     }
 
-    public Reviews(Shop shop, String review, int rating) {
-        this.shopName = shop.getShopName();
+
+    public Reviews(String review, int rating) {
         this.review = review;
         this.rating = rating;
     }
@@ -63,14 +62,6 @@ public class Reviews implements Serializable {
         this.rating = rating;
     }
 
-    public String getShopName() {
-        return shopName;
-    }
-
-    public void setShopName(String shopName) {
-        this.shopName = shopName;
-    }
-
     public Shop getShop() {
         return shop;
     }
@@ -79,7 +70,6 @@ public class Reviews implements Serializable {
         this.shop = shop;
     }
 
-    
     
     //--------------------------------------------------------------------------
     @Override
@@ -104,6 +94,6 @@ public class Reviews implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.Reviews[ id=" + id + " ]";
-    }  
+        return "Reviews{" + "id=" + id + ", review=" + review + ", rating=" + rating + ", shop=" + shop + '}';
+    }
 }

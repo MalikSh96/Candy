@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="facade.UserFacadeTest" time="0.038" tests="4" errors="0" skipped="4" failures="0">
 =======
 <testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="facade.UserFacadeTest" time="0.172" tests="4" errors="0" skipped="3" failures="0">
+>>>>>>> malik
+=======
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="facade.UserFacadeTest" time="0.141" tests="6" errors="0" skipped="6" failures="0">
 >>>>>>> malik
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -66,6 +70,12 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
+  <testcase name="testEditUser" classname="facade.UserFacadeTest" time="0">
+    <skipped message="public void facade.UserFacadeTest.testEditUser() is @Disabled"/>
+  </testcase>
+  <testcase name="testGetAllUsers" classname="facade.UserFacadeTest" time="0">
+    <skipped message="public void facade.UserFacadeTest.testGetAllUsers() is @Disabled"/>
+  </testcase>
   <testcase name="testGetVerifiedUser" classname="facade.UserFacadeTest" time="0">
     <skipped message="public void facade.UserFacadeTest.testGetVerifiedUser() throws java.lang.Exception is @Disabled"/>
   </testcase>
@@ -78,7 +88,9 @@
 =======
 >>>>>>> malik
   </testcase>
-  <testcase name="testCreateUser" classname="facade.UserFacadeTest" time="0.11"/>
+  <testcase name="testCreateUser" classname="facade.UserFacadeTest" time="0">
+    <skipped message="public void facade.UserFacadeTest.testCreateUser() is @Disabled"/>
+  </testcase>
   <testcase name="testGetInstance" classname="facade.UserFacadeTest" time="0">
     <skipped message="public void facade.UserFacadeTest.testGetInstance() is @Disabled"/>
   </testcase>
