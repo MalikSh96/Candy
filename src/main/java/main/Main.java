@@ -1,16 +1,9 @@
 package main;
 
-import entity.CandyType;
-import entity.Orderline;
-import entity.Role;
+import entity.Reviews;
 import entity.Shop;
-import entity.User;
-import entity.UserOrder;
-import facade.CandyFacade;
-import facade.OrderFacade;
-import facade.OrderlineFacade;
+import facade.ReviewFacade;
 import facade.ShopFacade;
-import facade.UserFacade;
 
 /**
  *
@@ -50,6 +43,7 @@ public class Main {
         
         //----------------------------------------------------------------------
         //ShopFacade
+<<<<<<< HEAD
 //        ShopFacade sf = new ShopFacade();
 //        Shop shop = new Shop("mainShop", "mainShopAddress", 1234, 10);
 //        Shop shop = new Shop("mainShop2", "mainShopAddress2", 1234, 15);
@@ -57,7 +51,22 @@ public class Main {
 //        System.out.println("sf " + sf.addShop(shop));
 //
 //        System.out.println("Find by zip " + sf.getShopsByPostalCode(1234));
+=======
+        ShopFacade sf = new ShopFacade();
+//        System.out.println("Find by zip " + sf.getShopsByPostalCode(4321));
+
+
+        //----------------------------------------------------------------------
+        ReviewFacade rf = new ReviewFacade();
+//        Shop s = sf.getShopById(3);
+//        Reviews r = new Reviews(s, "Main good", 3);
+//        Reviews r = new Reviews("Main, good candy", 5);
+//        r.setShop(s);
+//        s.addReview(r);
+//        
+//        rf.addReview(r);
+        System.out.println("List reviews " + rf.getAllReviewsForOneShop(1));
+>>>>>>> 72d0f6cceb1ed396069d90dd4a1f8242a6796285
         
     }
-    
 }

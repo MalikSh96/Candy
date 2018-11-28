@@ -1,4 +1,7 @@
+C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\facade\ReviewFacade.java
+C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\dto\CandyInfo.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\exceptions\NotFoundException.java
+C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\dto\UserInfo.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\entity\CandyType.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\facade\CandyFacade.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\security\LoginEndpoint.java
@@ -11,11 +14,12 @@ C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\entity\Re
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\exceptions\AuthenticationException.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\entity\User.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\cors\CorsResponseFilter.java
+C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\dto\ShopInfo.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\security\UserPrincipal.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\security\JWTSecurityContext.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\entity\Role.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\mappers\ShopInfo.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\security\SharedSecret.java
+C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\dto\ReviewsInfo.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\exceptions\GenericExceptionMapper.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\cors\CorsRequestFilter.java
 C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\facade\OrderFacade.java

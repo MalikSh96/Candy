@@ -5,6 +5,7 @@
  */
 package facade;
 
+import dto.CandyInfo;
 import entity.CandyType;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,10 +52,10 @@ public class CandyFacade {
         }
     }
 
-    public List<CandyType> getAllCandy() 
+    public List<CandyInfo> getAllCandy() 
     {
-        List<CandyType> getAllCandy = new ArrayList<>();
-        Query query = factory.createEntityManager().createQuery("SELECT NEW mappers.CandyInfo(c.candyName) FROM CandyType AS c");
+        List<CandyInfo> getAllCandy = new ArrayList<>();
+        Query query = factory.createEntityManager().createQuery("SELECT NEW dto.CandyInfo(c) FROM CandyType AS c");
         getAllCandy = query.getResultList();
         return getAllCandy;
     }
