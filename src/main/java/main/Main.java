@@ -1,23 +1,19 @@
 package main;
 
-import entity.Reviews;
-import entity.Shop;
+import entity.Role;
+import entity.User;
 import facade.ReviewFacade;
-import facade.ShopFacade;
+import facade.UserFacade;
 
-/**
- *
- * @author malik
- */
 public class Main {
     public static void main(String[] args) {
         //----------------------------------------------------------------------
         //UserFacade
-//        UserFacade facade = new UserFacade();
-//        Role userRole = new Role("user");
-//        User user = new User("mainF", "mainL", "main@main.main", "hellofrommain", "123456789", "CityHus", "mainstreet 1.tv", 2100);
-//        user.addRole(userRole);
-//        System.out.println("CreateUser: " + facade.createUser(user));
+        UserFacade facade = new UserFacade();
+        Role userRole = new Role("user");
+        User user = new User("mainF", "mainL", "main@main.main", "hellofrommain", "123456789", "CityHus", "mainstreet 1.tv", 2100);
+        user.addRole(userRole);
+        System.out.println("CreateUser: " + facade.createUser(user));
 
         //----------------------------------------------------------------------
         //CandyFacade
@@ -43,7 +39,6 @@ public class Main {
         
         //----------------------------------------------------------------------
         //ShopFacade
-<<<<<<< HEAD
 //        ShopFacade sf = new ShopFacade();
 //        Shop shop = new Shop("mainShop", "mainShopAddress", 1234, 10);
 //        Shop shop = new Shop("mainShop2", "mainShopAddress2", 1234, 15);
@@ -51,8 +46,6 @@ public class Main {
 //        System.out.println("sf " + sf.addShop(shop));
 //
 //        System.out.println("Find by zip " + sf.getShopsByPostalCode(1234));
-=======
-        ShopFacade sf = new ShopFacade();
 //        System.out.println("Find by zip " + sf.getShopsByPostalCode(4321));
 
 
@@ -66,7 +59,6 @@ public class Main {
 //        
 //        rf.addReview(r);
         System.out.println("List reviews " + rf.getAllReviewsForOneShop(1));
->>>>>>> 72d0f6cceb1ed396069d90dd4a1f8242a6796285
         
     }
 }
