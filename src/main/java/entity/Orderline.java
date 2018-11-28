@@ -47,6 +47,20 @@ public class Orderline implements Serializable {
         this.type = type;
         this.totalWeight = totalWeight;
     }
+
+    public Orderline(int totalWeight, CandyType type, Shop shop)
+    {
+        this.type = type;
+        this.totalWeight = totalWeight;
+        this.shop = shop;
+    }
+
+    public Orderline(int totalPrice, int totalWeight, CandyType type)
+    {
+        this.totalPricePrCandyType = totalPrice;
+        this.type = type;
+        this.totalWeight = totalWeight;
+    }
     
     
     

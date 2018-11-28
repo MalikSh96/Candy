@@ -10,9 +10,13 @@ public class ShopInfo {
     private String shopName;
     private String shopAddress;
     private int shopPostalCode;
+    private int shopPrice;
     private int phone;
     private String email;
 
+    public ShopInfo() {
+        
+    }
     public ShopInfo(Shop shop)
     {
         this.shopName = shop.getShopName();
@@ -20,7 +24,9 @@ public class ShopInfo {
         this.shopPostalCode = shop.getShopPostalCode();
         this.phone = shop.getPhone();
         this.email = shop.getEmail();
+        this.shopPrice = shop.getPrice();
     }
+    
     
 //    public ShopInfo(String shopName, String shopAddress, int shopPostalCode, int phone, String email) {
 //        this.shopName = shopName;

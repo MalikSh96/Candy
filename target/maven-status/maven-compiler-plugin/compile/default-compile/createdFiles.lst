@@ -27,6 +27,8 @@ entity\UserOrder.class
 exceptions\AuthenticationException.class
 facade\ShopFacade.class
 security\LoginEndpoint.class
+mappers\Orderline.class
+mappers\ShopInfo.class
 dto\ReviewsInfo.class
 security\JWTAuthenticationFilter.class
 cors\CorsRequestFilter.class

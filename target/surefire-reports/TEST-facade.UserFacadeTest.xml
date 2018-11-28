@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="facade.UserFacadeTest" time="0.038" tests="4" errors="0" skipped="4" failures="0">
-=======
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="facade.UserFacadeTest" time="0.172" tests="4" errors="0" skipped="3" failures="0">
->>>>>>> malik
-=======
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="facade.UserFacadeTest" time="0.141" tests="6" errors="0" skipped="6" failures="0">
->>>>>>> malik
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="facade.UserFacadeTest" time="0.051" tests="6" errors="0" skipped="6" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_144\jre\bin"/>
@@ -81,12 +73,6 @@
   </testcase>
   <testcase name="testFindUser" classname="facade.UserFacadeTest" time="0">
     <skipped message="public void facade.UserFacadeTest.testFindUser() is @Disabled"/>
-<<<<<<< HEAD
-  </testcase>
-  <testcase name="testCreateUser" classname="facade.UserFacadeTest" time="0">
-    <skipped message="public void facade.UserFacadeTest.testCreateUser() is @Disabled"/>
-=======
->>>>>>> malik
   </testcase>
   <testcase name="testCreateUser" classname="facade.UserFacadeTest" time="0">
     <skipped message="public void facade.UserFacadeTest.testCreateUser() is @Disabled"/>

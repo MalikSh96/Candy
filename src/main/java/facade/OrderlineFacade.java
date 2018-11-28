@@ -29,7 +29,7 @@ public class OrderlineFacade {
 
         EntityManager manager = factory.createEntityManager();
         try {
-            Query query = manager.createQuery("SELECT new mappers.Orderline FROM candydummy.orderline");
+            Query query = manager.createQuery("SELECT new mappers.Orderline() FROM candydummy.orderline ol");
             olList = query.getResultList();
         } finally {
             manager.close();

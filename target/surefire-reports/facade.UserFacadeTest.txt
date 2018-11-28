@@ -1,12 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: facade.UserFacadeTest
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-<<<<<<< HEAD
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 0.038 sec - in facade.UserFacadeTest
-=======
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 0.172 sec - in facade.UserFacadeTest
->>>>>>> malik
-=======
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 6, Time elapsed: 0.141 sec - in facade.UserFacadeTest
->>>>>>> malik
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 6, Time elapsed: 0.051 sec - in facade.UserFacadeTest

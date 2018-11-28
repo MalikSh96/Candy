@@ -1,13 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\entity\CandyType.java
 C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\entity\UserOrder.java
 C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\entity\Reviews.java
 C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\facade\OrderFacade.java
 C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\main\Main.java
+C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\dto\CandyInfo.java
+C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\mappers\Orderline.java
 C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\entity\Shop.java
 C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\entity\Orderline.java
 C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\entity\Role.java
+C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\dto\ShopInfo.java
 C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\facade\ShopFacade.java
 C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\facade\UserFacade.java
 C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\entity\User.java
@@ -18,43 +19,13 @@ C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\facade\Ord
 C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\mappers\ShopInfo.java
 C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\security\UserPrincipal.java
 C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\calculator\Calculator.java
+C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\dto\ReviewsInfo.java
 C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\security\JWTAuthenticationFilter.java
 C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\security\JWTSecurityContext.java
+C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\dto\UserInfo.java
 C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\facade\CandyFacade.java
 C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\security\SharedSecret.java
 C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\exceptions\GenericExceptionMapper.java
+C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\facade\ReviewFacade.java
 C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\security\LoginEndpoint.java
 C:\Users\Jokli\Desktop\Datamatiker\Projects\Candy\Candy\src\main\java\exceptions\AuthenticationException.java
-=======
-=======
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\facade\ReviewFacade.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\dto\CandyInfo.java
->>>>>>> malik
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\exceptions\NotFoundException.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\dto\UserInfo.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\entity\CandyType.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\facade\CandyFacade.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\security\LoginEndpoint.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\facade\ShopFacade.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\calculator\Calculator.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\entity\UserOrder.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\entity\Orderline.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\security\JWTAuthenticationFilter.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\entity\Reviews.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\exceptions\AuthenticationException.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\entity\User.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\cors\CorsResponseFilter.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\dto\ShopInfo.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\security\UserPrincipal.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\security\JWTSecurityContext.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\entity\Role.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\security\SharedSecret.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\dto\ReviewsInfo.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\exceptions\GenericExceptionMapper.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\cors\CorsRequestFilter.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\facade\OrderFacade.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\entity\Shop.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\facade\OrderlineFacade.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\facade\UserFacade.java
-C:\Users\malik\OneDrive\Documents\NetBeansProjects\Candy\src\main\java\main\Main.java
->>>>>>> malik
