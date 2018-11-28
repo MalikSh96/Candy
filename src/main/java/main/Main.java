@@ -49,6 +49,7 @@ public class Main {
         
         //----------------------------------------------------------------------
         //ShopFacade
+<<<<<<< HEAD
 //        Shop shop = new Shop("mainShop", "mainShopAddress", 1234, 10, 12345678, "mainShop@mainShop.com");
 //        Shop shop1 = new Shop("mainShop2", "mainShopAddress2", 1234, 15, 12345678, "mainShop1@mainShop1.com");
 //        Shop shop2 = new Shop("mainShop3", "mainAddressShop", 4321, 5, 12345678, "mainShop2@mainShop2.com");
@@ -57,6 +58,10 @@ public class Main {
 //        System.out.println("sf " + sf.addShop(shop2));
 //        System.out.println("Find by zip " + sf.getShopsByPostalCode(1234));
 //        System.out.println(olf.getAllOrderlines().toString());
+=======
+        ShopFacade sf = new ShopFacade();
+
+>>>>>>> 81581832a7e6d1c9c5c79b5a3ecad8dea7899265
 //        System.out.println("Find by zip " + sf.getShopsByPostalCode(4321));
 
         //----------------------------------------------------------------------

@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -29,20 +30,22 @@ public class Shop implements Serializable {
 
     private String shopName;
     private String shopAddress;
+   
     private int shopPostalCode;
     private int price;
+
     
     private int phone;
     private String email;
     
     private int averageRating;
-    
+
     @OneToMany(cascade = CascadeType.PERSIST)
     List<Reviews> reviews = new ArrayList<>();
-    
+
     @OneToMany(cascade = CascadeType.PERSIST)
-    List<CandyType> sortiment = new ArrayList<>(); 
-    
+    List<CandyType> sortiment = new ArrayList<>();
+
     //--------------------------------------------------------------------------
     //Neceassary constructors
     //Empty constructors avoids problems
@@ -58,7 +61,6 @@ public class Shop implements Serializable {
         this.email = email;
     }
 
-    
     //--------------------------------------------------------------------------
     //Getters and setters
     public Integer getId() {
@@ -110,7 +112,7 @@ public class Shop implements Serializable {
         for (Reviews review : reviews) {
             r += review.getRating();
         }
-        this.averageRating = (r/reviews.size());
+        this.averageRating = (r / reviews.size());
     }
 
     public List<Reviews> getReviews() {
@@ -120,6 +122,7 @@ public class Shop implements Serializable {
     public void setReviews(List<Reviews> reviews) {
         this.reviews = reviews;
     }
+
 
     public void addReview(Reviews review)
     {
@@ -159,7 +162,7 @@ public class Shop implements Serializable {
         hash += (id != null ? id.hashCode() : 0);
         return hash;
     }
-    
+
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set

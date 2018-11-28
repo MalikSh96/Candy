@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
+
 import dto.ShopInfo;
 
 /**
@@ -14,8 +15,9 @@ import dto.ShopInfo;
  * @author malik
  */
 public class ShopFacade {
+
     private EntityManagerFactory factory = Persistence.createEntityManagerFactory("persistence");
-    
+
     public Shop addShop(Shop shop) {
         EntityManager manager = factory.createEntityManager();
         System.out.println("Before try");
@@ -30,7 +32,22 @@ public class ShopFacade {
             manager.close();
         }
     }
-    
+
+    public Shop findShopById(int id) {
+        //EntityManager manager = getEntityManager();
+        EntityManager manager = factory.createEntityManager();
+        Shop ct = null;
+
+        try {
+            manager.getTransaction().begin();
+            ct = manager.find(Shop.class, id);
+            manager.getTransaction().commit();
+            return ct;
+        } finally {
+            manager.close();
+        }
+    }
+
     public List<ShopInfo> getShopsByPostalCode(int postalCode) 
     {
         List<ShopInfo> shopsByPostalCode = new ArrayList<>();
@@ -40,7 +57,7 @@ public class ShopFacade {
         shopsByPostalCode = query.getResultList();
         return shopsByPostalCode;
     }
-    
+   
     public List<ShopInfo> getAllShops() 
     {
         List<ShopInfo> allShops = new ArrayList<>();
