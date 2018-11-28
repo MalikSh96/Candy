@@ -1,6 +1,5 @@
 package facade;
 
-import static entity.Orderline_.type;
 import entity.Shop;
 import java.util.ArrayList;
 import java.util.List;

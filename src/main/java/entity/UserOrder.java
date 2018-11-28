@@ -1,6 +1,5 @@
 package entity;
 
-import calculator.Calculator;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -35,7 +34,7 @@ public class UserOrder implements Serializable {
     @ManyToOne
     private User user;
     
-    @OneToMany(cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "uOrder", cascade = CascadeType.PERSIST)
     private List<Orderline> orderLine = new ArrayList<>();
     
     private int totalPrice;
@@ -92,6 +91,11 @@ public class UserOrder implements Serializable {
         this.orderLine = orderLine;
     }
 
+    public void addOrderline(Orderline ol)
+    {
+        this.orderLine.add(ol);
+    }
+    
     public int getTotalPrice() {
         return totalPrice;
     }
