@@ -34,6 +34,10 @@ public class Shop implements Serializable {
     private int shopPostalCode;
     private int price;
 
+    
+    private int phone;
+    private String email;
+    
     private int averageRating;
 
     @OneToMany(cascade = CascadeType.PERSIST)
@@ -48,11 +52,13 @@ public class Shop implements Serializable {
     public Shop() {
     }
 
-    public Shop(String shopName, String shopAddress, int shopPostalCode, int price) {
+    public Shop(String shopName, String shopAddress, int shopPostalCode, int price, int phone, String email) {
         this.shopName = shopName;
         this.shopAddress = shopAddress;
         this.shopPostalCode = shopPostalCode;
         this.price = price;
+        this.phone = phone;
+        this.email = email;
     }
 
     //--------------------------------------------------------------------------
@@ -117,7 +123,9 @@ public class Shop implements Serializable {
         this.reviews = reviews;
     }
 
-    public void addReviews(Reviews review) {
+
+    public void addReview(Reviews review)
+    {
         reviews.add(review);
     }
 
@@ -129,6 +137,23 @@ public class Shop implements Serializable {
         this.sortiment = candytype;
     }
 
+    public int getPhone() {
+        return phone;
+    }
+
+    public void setPhone(int phone) {
+        this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+    
     //--------------------------------------------------------------------------
     //Java generated code
     @Override
@@ -155,5 +180,4 @@ public class Shop implements Serializable {
     public String toString() {
         return "entity.Shop[ id=" + id + " ]";
     }
-
 }

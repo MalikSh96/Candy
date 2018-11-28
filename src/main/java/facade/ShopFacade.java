@@ -7,7 +7,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
-import mappers.ShopInfo;
+
+import dto.ShopInfo;
 
 /**
  *
@@ -46,16 +47,40 @@ public class ShopFacade {
             manager.close();
         }
     }
-    
- 
 
-    public List<ShopInfo> getShopsByPostalCode(int postalCode) {
+    public List<ShopInfo> getShopsByPostalCode(int postalCode) 
+    {
         List<ShopInfo> shopsByPostalCode = new ArrayList<>();
         System.out.println("Zip" + postalCode);
-        Query query = factory.createEntityManager().createQuery("SELECT NEW mappers.ShopInfo(s) FROM Shop AS s where s.shopPostalCode = :shopPostalCode");
+        Query query = factory.createEntityManager().createQuery("SELECT NEW dto.ShopInfo(s) FROM Shop AS s where s.shopPostalCode = :shopPostalCode");
         query.setParameter("shopPostalCode", postalCode);
         shopsByPostalCode = query.getResultList();
         return shopsByPostalCode;
     }
    
+    public List<ShopInfo> getAllShops() 
+    {
+        List<ShopInfo> allShops = new ArrayList<>();
+        Query query = factory.createEntityManager().createQuery("SELECT NEW dto.ShopInfo(s) FROM Shop AS s");
+        allShops = query.getResultList();
+        return allShops;
+    }
+    
+    public Shop getShopById(int id) {
+        //EntityManager manager = getEntityManager();
+        EntityManager manager = factory.createEntityManager();
+        Shop s = null;
+        
+        try
+        {
+            manager.getTransaction().begin();
+            s = manager.find(Shop.class, id);
+            manager.getTransaction().commit();
+            return s;
+        }
+        finally
+        {
+            manager.close();
+        }
+    }
 }

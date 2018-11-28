@@ -27,7 +27,7 @@ public class CandyType implements Serializable {
     private String candyName; 
     //private String description; //is candy description needed?
 //    private int weight; //should be weight pr unit, remember!
-
+    
     @OneToMany(cascade = CascadeType.PERSIST)
     private List<Orderline> line = new ArrayList<>();
 

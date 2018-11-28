@@ -1,6 +1,5 @@
 package entity;
 
-import calculator.Calculator;
 import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,8 +22,7 @@ public class Orderline implements Serializable {
     private int totalPricePrCandyType;
     
     @ManyToOne
-    private UserOrder userOrder; /*<-- is the customers id from that originates from the customerorder table, customer_id is the 
-    id that identifies the "original id" (also customerorder tabel) */
+    private UserOrder uOrder; 
 
     @ManyToOne
     private CandyType type = new CandyType();
@@ -38,9 +36,9 @@ public class Orderline implements Serializable {
     }
     //implement necessary constructors
 
-    public Orderline(int totalPricePrCandyType, UserOrder userOrder, int totalWeight) {
+    public Orderline(int totalPricePrCandyType, UserOrder uOrder, int totalWeight) {
         this.totalPricePrCandyType = totalPricePrCandyType;
-        this.userOrder = userOrder;
+        this.uOrder = uOrder;
         this.totalWeight = totalWeight;
     }
 
@@ -61,12 +59,12 @@ public class Orderline implements Serializable {
         this.id = id;
     }
 
-    public UserOrder getUserOrder() {
-        return userOrder;
+    public UserOrder getUOrder() {
+        return uOrder;
     }
 
-    public void setUserOrder(UserOrder UserOrder) {
-        this.userOrder = UserOrder;
+    public void setUOrder(UserOrder uOrder) {
+        this.uOrder = uOrder;
     }
 
     public CandyType getType() {

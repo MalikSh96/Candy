@@ -1,12 +1,17 @@
 package entity;
 
 import entity.Role;
+import entity.UserOrder;
 import javax.annotation.Generated;
 import javax.persistence.metamodel.ListAttribute;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
+<<<<<<< HEAD
 @Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2018-11-23T12:45:47")
+=======
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2018-11-27T12:31:16")
+>>>>>>> malik
 @StaticMetamodel(User.class)
 public class User_ { 
 
@@ -18,7 +23,7 @@ public class User_ {
     public static volatile SingularAttribute<User, Integer> balance;
     public static volatile SingularAttribute<User, String> phone;
     public static volatile SingularAttribute<User, String> city;
-    public static volatile SingularAttribute<User, Integer> id;
+    public static volatile ListAttribute<User, UserOrder> userOrder;
     public static volatile ListAttribute<User, Role> roleList;
     public static volatile SingularAttribute<User, String> email;
 

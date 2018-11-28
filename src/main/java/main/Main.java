@@ -1,16 +1,9 @@
 package main;
 
-import entity.CandyType;
-import entity.Orderline;
-import entity.Role;
+import entity.Reviews;
 import entity.Shop;
-import entity.User;
-import entity.UserOrder;
-import facade.CandyFacade;
-import facade.OrderFacade;
-import facade.OrderlineFacade;
+import facade.ReviewFacade;
 import facade.ShopFacade;
-import facade.UserFacade;
 
 /**
  *
@@ -30,7 +23,7 @@ public class Main {
         //CandyFacade
 //        CandyFacade cfacade = new CandyFacade();
 //        CandyType type = new CandyType("mainJordbær");
-//        System.out.println("CreateCandy: " + cfacade.addShop(type));
+//        System.out.println("CreateCandy: " + cfacade.addCandy(type));
 
 
         //----------------------------------------------------------------------
@@ -51,13 +44,20 @@ public class Main {
         //----------------------------------------------------------------------
         //ShopFacade
         ShopFacade sf = new ShopFacade();
-//        Shop shop = new Shop("mainShop", "mainShopAddress", 3000, 10);
-//        Shop shop = new Shop("mainShop2", "mainShopAddress2", 3000, 15);
-//        Shop shop = new Shop("mainShop3", "mainAddressShop", 2800, 5);
-//        System.out.println("sf " + sf.addShop(shop));
 
-//        System.out.println("Find by zip " + sf.getShopsByPostalCode(1234));
+//        System.out.println("Find by zip " + sf.getShopsByPostalCode(4321));
+
+
+        //----------------------------------------------------------------------
+        ReviewFacade rf = new ReviewFacade();
+//        Shop s = sf.getShopById(3);
+//        Reviews r = new Reviews(s, "Main good", 3);
+//        Reviews r = new Reviews("Main, good candy", 5);
+//        r.setShop(s);
+//        s.addReview(r);
+//        
+//        rf.addReview(r);
+        System.out.println("List reviews " + rf.getAllReviewsForOneShop(1));
         
     }
-    
 }

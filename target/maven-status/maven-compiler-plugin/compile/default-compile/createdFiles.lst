@@ -4,6 +4,7 @@ entity\Cityinfo_.class
 facade\CandyFacade.class
 exceptions\GenericExceptionMapper.class
 security\JWTSecurityContext.class
+dto\ShopInfo.class
 entity\Reviews_.class
 facade\OrderlineFacade.class
 security\SharedSecret.class
@@ -16,8 +17,12 @@ entity\Role_.class
 rest\CandyResource.class
 entity\Orderline.class
 facade\OrderFacade.class
+<<<<<<< HEAD
 entity\Cityinfo.class
 rest\ApplicationConfig.class
+=======
+facade\ReviewFacade.class
+>>>>>>> malik
 facade\UserFacade.class
 rest\ShopResource$Call.class
 security\UserPrincipal.class
@@ -25,13 +30,21 @@ entity\Reviews.class
 rest\ShopResource.class
 entity\Orderline_.class
 exceptions\NotFoundException.class
+dto\CandyInfo.class
+dto\UserInfo.class
 entity\UserOrder.class
 exceptions\AuthenticationException.class
+<<<<<<< HEAD
 mappers\CandyInfo.class
 rest\CandyResource$Call.class
 facade\ShopFacade.class
 security\LoginEndpoint.class
 mappers\ShopInfo.class
+=======
+facade\ShopFacade.class
+security\LoginEndpoint.class
+dto\ReviewsInfo.class
+>>>>>>> malik
 security\JWTAuthenticationFilter.class
 cors\CorsRequestFilter.class
 entity\User.class
