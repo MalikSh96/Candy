@@ -26,7 +26,7 @@ public class ShopFacadeTest {
     }
 
     @Test
-    //@Disabled
+    @Disabled
     public void testAddShop() {        
 
         Shop shop1 = new Shop("jUnitShop", "jUnitShopStreet", 3000, 10, 12345678, "jUnitShop@jUnitShop.shop");

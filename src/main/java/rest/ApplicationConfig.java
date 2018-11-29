@@ -33,6 +33,7 @@ public class ApplicationConfig extends Application {
         resources.add(cors.CorsResponseFilter.class);
         resources.add(exceptions.GenericExceptionMapper.class);
         resources.add(rest.CandyResource.class);
+        resources.add(rest.ReviewResource.class);
         resources.add(rest.ShopResource.class);
         resources.add(security.JWTAuthenticationFilter.class);
         resources.add(security.LoginEndpoint.class);

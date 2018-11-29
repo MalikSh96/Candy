@@ -7,6 +7,7 @@ import entity.Shop;
  * @author malik
  */
 public class ShopInfo {
+    private int id;
     private String shopName;
     private String shopAddress;
     private int shopPostalCode;
@@ -15,6 +16,7 @@ public class ShopInfo {
 
     public ShopInfo(Shop shop)
     {
+        this.id = shop.getId();
         this.shopName = shop.getShopName();
         this.shopAddress = shop.getShopAddress();
         this.shopPostalCode = shop.getShopPostalCode();
@@ -32,6 +34,8 @@ public class ShopInfo {
 
     @Override
     public String toString() {
-        return "ShopInfo{" + "shopName=" + shopName + ", shopAddress=" + shopAddress + ", shopPostalCode=" + shopPostalCode + ", phone=" + phone + ", email=" + email + '}';
+        return "ShopInfo{" + "id=" + id + ", shopName=" + shopName + ", shopAddress=" + shopAddress + ", shopPostalCode=" + shopPostalCode + ", phone=" + phone + ", email=" + email + '}';
     }
+
+   
 }

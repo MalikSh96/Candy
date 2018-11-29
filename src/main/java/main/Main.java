@@ -51,13 +51,13 @@ public class Main {
         //----------------------------------------------------------------------
         ReviewFacade rf = new ReviewFacade();
 //        Shop s = sf.getShopById(3);
-//        Reviews r = new Reviews(s, "Main good", 3);
 //        Reviews r = new Reviews("Main, good candy", 5);
 //        r.setShop(s);
 //        s.addReview(r);
 //        
 //        rf.addReview(r);
-        System.out.println("List reviews " + rf.getAllReviewsForOneShop(1));
+        //System.out.println("List reviews " + rf.getAllRatingsForOneShop(1));
+        System.out.println("--- " + rf.getAllRatingsForOneShop(1));
         
     }
 }
