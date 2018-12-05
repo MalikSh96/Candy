@@ -1,5 +1,6 @@
 C:\Users\jobje\Desktop\Skole CPH\CPH 3\Candy\src\main\java\entity\Shop.java
 C:\Users\jobje\Desktop\Skole CPH\CPH 3\Candy\src\main\java\facade\ReviewFacade.java
+C:\Users\jobje\Desktop\Skole CPH\CPH 3\Candy\src\main\java\rest\DemoResource.java
 C:\Users\jobje\Desktop\Skole CPH\CPH 3\Candy\src\main\java\cors\CorsRequestFilter.java
 C:\Users\jobje\Desktop\Skole CPH\CPH 3\Candy\src\main\java\cors\CorsResponseFilter.java
 C:\Users\jobje\Desktop\Skole CPH\CPH 3\Candy\src\main\java\exceptions\GenericExceptionMapper.java
@@ -19,6 +20,7 @@ C:\Users\jobje\Desktop\Skole CPH\CPH 3\Candy\src\main\java\rest\ApplicationConfi
 C:\Users\jobje\Desktop\Skole CPH\CPH 3\Candy\src\main\java\entity\CandyType.java
 C:\Users\jobje\Desktop\Skole CPH\CPH 3\Candy\src\main\java\security\UserPrincipal.java
 C:\Users\jobje\Desktop\Skole CPH\CPH 3\Candy\src\main\java\dto\UserInfo.java
+C:\Users\jobje\Desktop\Skole CPH\CPH 3\Candy\src\main\java\rest\UserResource.java
 C:\Users\jobje\Desktop\Skole CPH\CPH 3\Candy\src\main\java\dto\ShopInfo.java
 C:\Users\jobje\Desktop\Skole CPH\CPH 3\Candy\src\main\java\rest\ReviewResource.java
 C:\Users\jobje\Desktop\Skole CPH\CPH 3\Candy\src\main\java\entity\Role.java

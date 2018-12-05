@@ -1,9 +1,10 @@
 package main;
 
-import entity.Reviews;
-import entity.Shop;
+import entity.Role;
+import entity.User;
 import facade.ReviewFacade;
 import facade.ShopFacade;
+import facade.UserFacade;
 
 /**
  *
@@ -13,11 +14,11 @@ public class Main {
     public static void main(String[] args) {
         //----------------------------------------------------------------------
         //UserFacade
-//        UserFacade facade = new UserFacade();
-//        Role userRole = new Role("user");
-//        User user = new User("mainF", "mainL", "main@main.main", "hellofrommain", "123456789", "CityHus", "mainstreet 1.tv", "2100");
-//        user.addRole(userRole);
-//        System.out.println("CreateUser: " + facade.createUser(user));
+        UserFacade facade = new UserFacade();
+        Role adminRole = new Role("admin");
+        User user = new User("adminFirst", "adminLast", "admin@admin.admin", "adminpass", "123456789", "AdminHus", "adminStreet 1.tv", 2000);
+        user.addRole(adminRole);
+        System.out.println("CreateUser: " + facade.createUser(user));
 
         //----------------------------------------------------------------------
         //CandyFacade
@@ -57,7 +58,12 @@ public class Main {
 //        
 //        rf.addReview(r);
         //System.out.println("List reviews " + rf.getAllRatingsForOneShop(1));
-        System.out.println("--- " + rf.getAllRatingsForOneShop(1));
         
+//         Gson gson = new GsonBuilder().setPrettyPrinting().create();
+//        System.out.println("--- " + rf.getAllRatingsForOneShop(1));
+//        UserFacade uf = new UserFacade();
+//        User user = uf.findUser("gn@hotmail.com");
+//        System.out.println("SSS: " + user);
+//        System.out.println(gson.toJson(user));
     }
 }

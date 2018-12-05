@@ -26,11 +26,12 @@ public class UserFacade {
         return instance;
     }
     
-    public User getVerifiedUser(String username, String password) throws AuthenticationException {
+    public User getVerifiedUser(String email, String password) throws AuthenticationException {
         EntityManager manager = factory.createEntityManager();
         User user;
         try {
-            user = manager.find(User.class, username);
+            user = manager.find(User.class, email);
+            System.out.println("getverfiedUser: " + user.getRoleList());
             if (user == null || !user.verifyPassword(password)) {
                 throw new AuthenticationException("Invalid email or password");
             }
@@ -60,6 +61,8 @@ public class UserFacade {
         }
     }
     
+ 
+    
     
     public User findUser(String email) {
         //EntityManager manager = getEntityManager();
@@ -88,14 +91,17 @@ public class UserFacade {
         try
         {
             manager.getTransaction().begin();
+            /* 
             u = manager.find(User.class, user.getEmail());
             System.out.println("You are here " + u);
             if(u != null)
             {
                 manager.merge(user);
             }
+            */
+            manager.merge(user);
             manager.getTransaction().commit();
-            return u;
+            return user;
         }
         finally
         {

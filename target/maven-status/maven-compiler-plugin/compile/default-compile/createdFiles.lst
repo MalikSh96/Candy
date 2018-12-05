@@ -1,4 +1,5 @@
 entity\Shop.class
+rest\UserResource.class
 entity\CandyType.class
 facade\CandyFacade.class
 exceptions\GenericExceptionMapper.class
@@ -21,6 +22,7 @@ facade\ReviewFacade.class
 facade\UserFacade.class
 rest\ShopResource$Call.class
 security\UserPrincipal.class
+.netbeans_automatic_build
 entity\Reviews.class
 rest\ShopResource.class
 entity\Orderline_.class
@@ -33,6 +35,7 @@ rest\CandyResource$Call.class
 facade\ShopFacade.class
 security\LoginEndpoint.class
 dto\ReviewsInfo.class
+rest\DemoResource.class
 security\JWTAuthenticationFilter.class
 cors\CorsRequestFilter.class
 entity\User.class

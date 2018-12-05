@@ -1,6 +1,5 @@
 package facade;
 
-
 import entity.Role;
 import entity.User;
 import org.junit.Assert;
@@ -15,16 +14,15 @@ import org.junit.jupiter.api.Test;
  * @author malik
  */
 public class UserFacadeTest {
-    
+
     private UserFacade uf = new UserFacade();
-    
+
     public UserFacadeTest() {
     }
 
     @Before
     public void setUp() throws Exception {
     }
-    
 
     @Test
     @Disabled
@@ -40,11 +38,11 @@ public class UserFacadeTest {
     @Disabled
     public void testCreateUser() {
         Role userRole = new Role("user");
-        User user = new User("jUnitFirst", "jUnitLast", "jUnit@jUnit.jUnit", "junittest", "12345678", "JUnitHagen", "jUnitStreet 2.th", 1234);
+        User user = new User("jUnitFirst", "jUnitLast", "jUnittest@jUnit.jUnit", "junittest", "12345678", "JUnitHagen", "jUnitStreet 2.th", 1234);
         user.addRole(userRole);
         uf.createUser(user);
-        
-        User checkUser = uf.findUser("jUnit@jUnit.jUnit");
+
+        User checkUser = uf.findUser("jUnittest@jUnit.jUnit");
         assertNotNull(checkUser);
     }
 
@@ -76,5 +74,5 @@ public class UserFacadeTest {
         System.out.println("size " + uf.getAllUsers());
         Assertions.assertEquals(expected, actual);
     }
-    
+
 }

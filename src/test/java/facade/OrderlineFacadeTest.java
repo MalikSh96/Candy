@@ -17,31 +17,31 @@ import org.junit.jupiter.api.Test;
  *
  * @author malik
  */
-public class OrderlineFacadeTest {
-    
-    OrderlineFacade olf = new OrderlineFacade();
-    CandyFacade cf = new CandyFacade();
-    UserOrder uo = new UserOrder();
-    User u = new User();
-    Orderline ol = new Orderline();
-    
-    public OrderlineFacadeTest() {
-
-    }
-    
-    @Before
-    public void setUp() {
-    }
-
-    @Test
-    @Disabled
-    public void testCreateOrderline() {
-        Orderline ol = new Orderline(10, cf.findCandyById(1));
-        u.setEmail("jUnit@jUnit.jUnit");
-        uo.setUser(u);
-        ol.setUOrder(uo);
-        olf.createOrderline(ol);
-        
-        assertNotNull(ol);
-    }
-}
+//public class OrderlineFacadeTest {
+//    
+//    OrderlineFacade olf = new OrderlineFacade();
+//    CandyFacade cf = new CandyFacade();
+//    UserOrder uo = new UserOrder();
+//    User u = new User();
+//    Orderline ol = new Orderline();
+//    
+//    public OrderlineFacadeTest() {
+//
+//    }
+//    
+//    @Before
+//    public void setUp() {
+//    }
+//
+//    @Test
+//    @Disabled
+//    public void testCreateOrderline() {
+//        Orderline ol = new Orderline(10, cf.findCandyById(1));
+//        u.setEmail("jUnit@jUnit.jUnit");
+//        uo.setUser(u);
+//        ol.setUOrder(uo);
+//        olf.createOrderline(ol);
+//        
+//        assertNotNull(ol);
+//    }
+//}

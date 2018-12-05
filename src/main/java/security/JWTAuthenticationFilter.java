@@ -79,8 +79,9 @@ public class JWTAuthenticationFilter implements ContainerRequestFilter {
                 throw new AuthenticationException("Your Token is no longer valid");
             }
             String roles = signedJWT.getJWTClaimsSet().getClaim("roles").toString();
-            String username = signedJWT.getJWTClaimsSet().getClaim("username").toString();
-            return new UserPrincipal(username, roles);
+            String email = signedJWT.getJWTClaimsSet().getClaim("email").toString();
+            System.out.println("Roles: " +  roles);
+            return new UserPrincipal(email, roles);
         } else {
             throw new JOSEException("User could not be extracted from token");
         }
