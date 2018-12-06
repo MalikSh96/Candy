@@ -45,6 +45,9 @@ public class UserResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response createUser(String js) throws NotFoundException {
         System.out.println("js" + js);
+        if(js == null){
+            throw new NotFoundException("Nothing from createUser ");
+        }
         Role userRole = new Role("user");
         User u = gson.fromJson(js, User.class);
         u.addRole(userRole);
@@ -67,40 +70,14 @@ public class UserResource {
         if (savedUser == null) {
             throw new NotFoundException("User not found");
         }
-//        savedUser.setPassword(newUser.getPassword());
-//        savedUser.hashpassword();
+
 
         newUser.hashpassword();
         newUser.setRoleList(savedUser.getRoleList());
-//        if (newUser.getEmail() != null) {
-//            savedUser.setEmail(newUser.getEmail());
-//        }
+
         
         User user = uf.editUser(newUser);
-        
         return Response.ok().entity(gson.toJson(user)).build();
     }
 }
-//        User u = gson.fromJson(js, User.class);
-//        
-//        if(u == null)
-//        {
-//            System.out.println("Not a user " + email);
-//        }
-//        
-//        if (u.getEmail() != null) {
-//            uf.editUser(u);
-//            //saveUser.setEmail(u.getEmail());
-//        }
-//        
-////        User saveUser = uf.findUser(email);
-////        if (saveUser == null) {
-////            System.out.println("can't not found user "  + email);
-////        }
-//
-//
-////        u.hashpassword();
-//        System.out.println("user: " + u);
-////        uf.editUser(u);
-//        System.out.println(gson.fromJson(js, User.class));
-//        return Response.ok().entity(gson.toJson(u)).build();
+

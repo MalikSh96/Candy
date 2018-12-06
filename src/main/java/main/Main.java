@@ -16,9 +16,13 @@ public class Main {
         //UserFacade
         UserFacade facade = new UserFacade();
         Role adminRole = new Role("admin");
-        User user = new User("adminFirst", "adminLast", "admin@admin.admin", "adminpass", "123456789", "AdminHus", "adminStreet 1.tv", 2000);
-        user.addRole(adminRole);
-        System.out.println("CreateUser: " + facade.createUser(user));
+        User admin = new User("adminFirst", "adminLast", "admin@admin.admin", "adminpass", "123456789", "AdminHus", "adminStreet 1.tv", 2000);
+        admin.addRole(adminRole);
+        System.out.println("CreateUser: " + facade.createUser(admin));
+//        Role userRole = new Role("user");
+//        User user = new User("userFirst", "userLast", "user@user.user", "usernpass", "123456789", "userHus", "userStreet 1.tv", 2400);
+//        user.addRole(userRole);
+//        System.out.println("CreateUser: " + facade.createUser(user));
 
         //----------------------------------------------------------------------
         //CandyFacade
@@ -30,7 +34,7 @@ public class Main {
         //----------------------------------------------------------------------
         //OrderFacade
 //        OrderFacade of = new OrderFacade();
-//        UserOrder uo = new UserOrder(user);
+//        UserOrder uo = new UserOrder(admin);
 //        System.out.println("of " + of.createOrder(uo));
         
         
@@ -62,8 +66,8 @@ public class Main {
 //         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 //        System.out.println("--- " + rf.getAllRatingsForOneShop(1));
 //        UserFacade uf = new UserFacade();
-//        User user = uf.findUser("gn@hotmail.com");
-//        System.out.println("SSS: " + user);
-//        System.out.println(gson.toJson(user));
+//        User admin = uf.findUser("gn@hotmail.com");
+//        System.out.println("SSS: " + admin);
+//        System.out.println(gson.toJson(admin));
     }
 }

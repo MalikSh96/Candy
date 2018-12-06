@@ -28,19 +28,18 @@ public class LoginEndpoint {
 
     public static final int TOKEN_EXPIRE_TIME = 1000 * 60 * 30; //30 min
     UserFacade us;
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response login(String jsonString) throws AuthenticationException {
-        System.out.println("String" + jsonString);
         JsonObject json = new JsonParser().parse(jsonString).getAsJsonObject();
         String email = json.get("email").getAsString();
-        String password = json.get("password").getAsString();   
+        String password = json.get("password").getAsString();
         //Todo refactor into facade
         try {
             User user = UserFacade.getInstance().getVerifiedUser(email, password);
-            System.out.println("candy user: " + user.getRolesAsStrings() );
-            
+
             String token = createToken(email, user.getRolesAsStrings(), user.getFirstName(), user.getLastName(), user.getPhone(), user.getAddress(), user.getCity() ,user.getZip());
             JsonObject responseJson = new JsonObject();
             responseJson.addProperty("email", email);
@@ -56,34 +55,35 @@ public class LoginEndpoint {
         throw new AuthenticationException("Invalid email or password! Please try again");
     }
 
-    private String createToken(String email,List<String> roles, String firstName,String lastName, String phone,String address,String city, int zip) throws JOSEException {
+        private String createToken(String email,List<String> roles, String firstName,String lastName, String phone,String address,String city, int zip) throws JOSEException 
+        {
 
-        StringBuilder res = new StringBuilder();
-        for (String string : roles) {
-            res.append(string);
-            res.append(",");
-        }
-        String rolesAsString = res.length() > 0 ? res.substring(0, res.length() - 1) : "";
-        String issuer = "semesterdemo_security_course"; //redo this to your own
-        JWSSigner signer = new MACSigner(SharedSecret.getSharedKey());
-        Date date = new Date();
-        JWTClaimsSet claimsSet = new JWTClaimsSet.Builder()
-                .subject(email)
-                .claim("email", email)
-                .claim("roles", rolesAsString)
-                .claim("firstName", firstName)
-                .claim("lastName", lastName)
-                .claim("phone", phone)
-                .claim("address", address)
-                .claim("city", city)
-                .claim("zip", zip)
-                .claim("issuer", issuer)
-                .issueTime(date)
-                .expirationTime(new Date(date.getTime() + TOKEN_EXPIRE_TIME))
-                .build();
-        SignedJWT signedJWT = new SignedJWT(new JWSHeader(JWSAlgorithm.HS256), claimsSet);
-        signedJWT.sign(signer);
-        return signedJWT.serialize();
+            StringBuilder res = new StringBuilder();
+            for (String string : roles) {
+                res.append(string);
+                res.append(",");
+            }
+            String rolesAsString = res.length() > 0 ? res.substring(0, res.length() - 1) : "";
+            String issuer = "pollos hermanos"; //redo this to your own
+            JWSSigner signer = new MACSigner(SharedSecret.getSharedKey());
+            Date date = new Date();
+            JWTClaimsSet claimsSet = new JWTClaimsSet.Builder()
+                    .subject(email)
+                    .claim("email", email)
+                    .claim("roles", rolesAsString)
+                                    .claim("firstName", firstName)
+                                    .claim("lastName", lastName)
+                                    .claim("phone", phone)
+                                    .claim("address", address)
+                                    .claim("city", city)
+                                    .claim("zip", zip)
+                    .claim("issuer", issuer)
+                    .issueTime(date)
+                    .expirationTime(new Date(date.getTime() + TOKEN_EXPIRE_TIME))
+                    .build();
+            SignedJWT signedJWT = new SignedJWT(new JWSHeader(JWSAlgorithm.HS256), claimsSet);
+            signedJWT.sign(signer);
+            return signedJWT.serialize();
 
     }
 }

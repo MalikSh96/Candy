@@ -8,11 +8,13 @@ public class JWTSecurityContext implements SecurityContext {
    ContainerRequestContext request;
 
    public JWTSecurityContext(UserPrincipal user,ContainerRequestContext request) {
+       System.out.println("Brøndby"+ user);
        this.user = user;
        this.request = request;
    }
    @Override
    public boolean isUserInRole(String role) {
+       System.out.println("Hello");
        return user.isUserInRole(role);
    }
    @Override

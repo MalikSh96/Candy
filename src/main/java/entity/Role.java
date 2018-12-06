@@ -1,6 +1,7 @@
 package entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
@@ -34,7 +35,7 @@ public class Role implements Serializable {
     private String roleName;
     
     @ManyToMany(cascade = CascadeType.PERSIST ,mappedBy = "roleList")
-    private List<User> userList;
+    private List<User> userList = new ArrayList();
 
     
     //--------------------------------------------------------------------------

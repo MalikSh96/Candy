@@ -17,10 +17,10 @@ public class UserPrincipal implements Principal {
         this.roles = user.getRolesAsStrings();
     }
 
-    public UserPrincipal(String email, String... roles) {
+    public UserPrincipal(String email, String roles) {
         super();
         this.email = email;
-        this.roles = Arrays.asList(roles);
+        this.roles = Arrays.asList(roles.split(","));
     }
 
     @Override
@@ -29,6 +29,15 @@ public class UserPrincipal implements Principal {
     }
 
     public boolean isUserInRole(String role) {
+        System.out.println("this.roles");
+        System.out.println("rolesssssssss: " + role);
+        System.out.println("this.roles");
+        System.out.println("inroles:" + this.roles.contains(role));
         return this.roles.contains(role);
+    }
+
+    @Override
+    public String toString() {
+        return "UserPrincipal{" + "email=" + email + ", roles=" + roles + '}';
     }
 }
