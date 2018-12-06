@@ -40,4 +40,14 @@ public class ReviewFacade {
         allReviewsForOneShop = query.getResultList();
         return allReviewsForOneShop;
     }
+    
+    public List<Integer> getAllRatingsForOneShop(int shopId)
+    {
+        List<Integer> allReviewsForOneShop = new ArrayList<>();
+        System.out.println("shopId " + shopId);
+        Query query = factory.createEntityManager().createQuery("SELECT r.rating FROM Reviews r WHERE r.shop.id = :shopId");
+        query.setParameter("shopId", shopId);
+        allReviewsForOneShop = query.getResultList();
+        return allReviewsForOneShop;
+    }
 }

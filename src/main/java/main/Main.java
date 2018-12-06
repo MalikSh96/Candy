@@ -1,5 +1,6 @@
 package main;
 
+<<<<<<< HEAD
 import entity.CandyType;
 import entity.Orderline;
 import entity.Reviews;
@@ -10,6 +11,10 @@ import entity.UserOrder;
 import facade.CandyFacade;
 import facade.OrderFacade;
 import facade.OrderlineFacade;
+=======
+import entity.Role;
+import entity.User;
+>>>>>>> 9af97bfa119e9c56a3d50cb3184290b8026580f3
 import facade.ReviewFacade;
 import facade.ShopFacade;
 import facade.UserFacade;
@@ -18,11 +23,19 @@ public class Main {
     public static void main(String[] args) {
         //----------------------------------------------------------------------
         //UserFacade
+<<<<<<< HEAD
 //        UserFacade facade = new UserFacade();
 //        Role userRole = new Role("user");
 //        User user = new User("mainF", "mainL", "main@main.main", "hellofrommain", "123456789", "CityHus", "mainstreet 1.tv", 2100);
 //        user.addRole(userRole);
 //        System.out.println("CreateUser: " + facade.createUser(user));
+=======
+        UserFacade facade = new UserFacade();
+        Role adminRole = new Role("admin");
+        User user = new User("adminFirst", "adminLast", "admin@admin.admin", "adminpass", "123456789", "AdminHus", "adminStreet 1.tv", 2000);
+        user.addRole(adminRole);
+        System.out.println("CreateUser: " + facade.createUser(user));
+>>>>>>> 9af97bfa119e9c56a3d50cb3184290b8026580f3
 
         //----------------------------------------------------------------------
         //CandyFacade
@@ -63,12 +76,21 @@ public class Main {
         //----------------------------------------------------------------------
 //        ReviewFacade rf = new ReviewFacade();
 //        Shop s = sf.getShopById(3);
-//        Reviews r = new Reviews(s, "Main good", 3);
 //        Reviews r = new Reviews("Main, good candy", 5);
 //        r.setShop(s);
 //        s.addReview(r);       
 //        rf.addReview(r);
+<<<<<<< HEAD
 //        System.out.println("List reviews " + rf.getAllReviewsForOneShop(1));
+=======
+        //System.out.println("List reviews " + rf.getAllRatingsForOneShop(1));
+>>>>>>> 9af97bfa119e9c56a3d50cb3184290b8026580f3
         
+//         Gson gson = new GsonBuilder().setPrettyPrinting().create();
+//        System.out.println("--- " + rf.getAllRatingsForOneShop(1));
+//        UserFacade uf = new UserFacade();
+//        User user = uf.findUser("gn@hotmail.com");
+//        System.out.println("SSS: " + user);
+//        System.out.println(gson.toJson(user));
     }
 }

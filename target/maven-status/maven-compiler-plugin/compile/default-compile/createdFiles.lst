@@ -1,6 +1,6 @@
 entity\Shop.class
+rest\UserResource.class
 entity\CandyType.class
-entity\Cityinfo_.class
 facade\CandyFacade.class
 exceptions\GenericExceptionMapper.class
 security\JWTSecurityContext.class
@@ -17,15 +17,12 @@ entity\Role_.class
 rest\CandyResource.class
 entity\Orderline.class
 facade\OrderFacade.class
-<<<<<<< HEAD
-entity\Cityinfo.class
 rest\ApplicationConfig.class
-=======
 facade\ReviewFacade.class
->>>>>>> malik
 facade\UserFacade.class
 rest\ShopResource$Call.class
 security\UserPrincipal.class
+.netbeans_automatic_build
 entity\Reviews.class
 rest\ShopResource.class
 entity\Orderline_.class
@@ -34,22 +31,24 @@ dto\CandyInfo.class
 dto\UserInfo.class
 entity\UserOrder.class
 exceptions\AuthenticationException.class
-<<<<<<< HEAD
-mappers\CandyInfo.class
 rest\CandyResource$Call.class
 facade\ShopFacade.class
 security\LoginEndpoint.class
+<<<<<<< HEAD
 mappers\ShopInfo.class
 =======
 facade\ShopFacade.class
 security\LoginEndpoint.class
 mappers\Orderline.class
 mappers\ShopInfo.class
+=======
+>>>>>>> 9af97bfa119e9c56a3d50cb3184290b8026580f3
 dto\ReviewsInfo.class
->>>>>>> malik
+rest\DemoResource.class
 security\JWTAuthenticationFilter.class
 cors\CorsRequestFilter.class
 entity\User.class
+rest\ReviewResource.class
 cors\CorsResponseFilter.class
 exceptions\Error.class
 entity\Shop_.class

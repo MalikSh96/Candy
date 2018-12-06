@@ -1,5 +1,4 @@
 facade\OrderFacadeTest.class
 facade\ShopFacadeTest.class
 facade\CandyFacadeTest.class
-facade\OrderlineFacadeTest.class
 facade\UserFacadeTest.class

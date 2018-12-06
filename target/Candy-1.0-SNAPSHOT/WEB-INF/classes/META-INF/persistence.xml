@@ -3,6 +3,7 @@
   <persistence-unit name="persistence" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     <class>entity.Cityinfo</class>
@@ -16,11 +17,14 @@
     <class>entity.UserOrder</class>
 >>>>>>> malik
 >>>>>>> 81581832a7e6d1c9c5c79b5a3ecad8dea7899265
+=======
+>>>>>>> 9af97bfa119e9c56a3d50cb3184290b8026580f3
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/candydummy?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <property name="javax.persistence.jdbc.password" value="Password"/>
 =======
@@ -29,6 +33,9 @@
 =======
 >>>>>>> malik
 >>>>>>> 81581832a7e6d1c9c5c79b5a3ecad8dea7899265
+=======
+      <property name="javax.persistence.jdbc.password" value="Bambi2008"/>
+>>>>>>> 9af97bfa119e9c56a3d50cb3184290b8026580f3
       <property name="javax.persistence.schema-generation.database.action" value="create"/>
     </properties>
   </persistence-unit>

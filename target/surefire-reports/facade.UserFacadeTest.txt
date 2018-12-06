@@ -2,6 +2,7 @@
 Test set: facade.UserFacadeTest
 -------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Tests run: 6, Failures: 0, Errors: 0, Skipped: 6, Time elapsed: 0.051 sec - in facade.UserFacadeTest
 =======
 <<<<<<< HEAD
@@ -10,3 +11,6 @@ Tests run: 4, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 0.034 sec - in f
 Tests run: 6, Failures: 0, Errors: 0, Skipped: 6, Time elapsed: 0.141 sec - in facade.UserFacadeTest
 >>>>>>> malik
 >>>>>>> 81581832a7e6d1c9c5c79b5a3ecad8dea7899265
+=======
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 6, Time elapsed: 0.178 sec - in facade.UserFacadeTest
+>>>>>>> 9af97bfa119e9c56a3d50cb3184290b8026580f3

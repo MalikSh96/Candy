@@ -2,8 +2,7 @@ package calculator;
 
 import entity.Orderline;
 import entity.Shop;
-import entity.UserOrder;
-import java.util.ArrayList;
+import facade.ReviewFacade;
 import java.util.List;
 
 /**
@@ -14,7 +13,7 @@ public class Calculator {
     
     private int unitPrice;
     private int totalPrice;
-    
+    private ReviewFacade rf;
     public int unitP(int weight, Shop s)
     {
         unitPrice = (weight * (s.getPrice() / 100));
@@ -28,4 +27,10 @@ public class Calculator {
         }
         return totalPrice;
     }
+    
+//    public double totalReviewScore(List<Integer> list){
+//    
+//      
+//        return null;
+//    }
 }

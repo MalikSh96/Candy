@@ -111,6 +111,20 @@ public class ShopResource {
         }
         return gson.toJson(findOnPostalcode);
     }
+    
+        @GET
+    @Path("{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String getshopbyid(@PathParam("id") int id) throws NotFoundException, InterruptedException, ExecutionException {
+
+        Shop s = sf.getShopById(id);
+       
+
+        if (s == null) {
+            throw new NotFoundException("Can't found Shop");
+        }
+        return gson.toJson(s);
+    }
 
 }
 

@@ -28,6 +28,11 @@ public class CandyType implements Serializable {
     //private String description; //is candy description needed?
 //    private int weight; //should be weight pr unit, remember!
     
+    private final int stock = 1;
+    private String flavour;
+    private String type;
+    private String img;
+    
     @OneToMany(cascade = CascadeType.PERSIST)
     private List<Orderline> line = new ArrayList<>();
 
@@ -37,6 +42,12 @@ public class CandyType implements Serializable {
     public CandyType(String candyName) {
         this.candyName = candyName;
 
+    }
+
+    public CandyType(String candyName, String flavour, String type) {
+        this.candyName = candyName;
+        this.flavour = flavour;
+        this.type = type;
     }
     
     
@@ -65,6 +76,34 @@ public class CandyType implements Serializable {
         this.line = line;
     }
 
+    public int getStock() {
+        return stock;
+    }
+
+    public String getFlavour() {
+        return flavour;
+    }
+
+    public void setFlavour(String flavour) {
+        this.flavour = flavour;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
     
     //--------------------------------------------------------------------------
     @Override
@@ -89,11 +128,6 @@ public class CandyType implements Serializable {
 
     @Override
     public String toString() {
-        return "CandyType{" + "id=" + id + ", candyName=" + candyName + '}';
+        return "CandyType{" + "id=" + id + ", candyName=" + candyName + ", stock=" + stock + ", flavour=" + flavour + ", type=" + type + ", img=" + img + ", line=" + line + '}';
     }
-
-    
-
-   
-    
 }

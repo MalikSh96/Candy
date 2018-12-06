@@ -30,10 +30,10 @@ public class CandyFacadeTest {
     @Test
     @Disabled
     public void testAddCandy() {
-        CandyType ct = new CandyType("JUnitStrawberry");
+        CandyType ct = new CandyType("JUnitStrawberry", "sugar", "strawberry");
         cf.addCandy(ct);
 
-        ct = new CandyType("jUnitChocolate");
+        ct = new CandyType("jUnitChocolate", "dark taste", "dark chocolate");
         cf.addCandy(ct);
         
         //CandyType checkCandy = cf.findCandyById(2);

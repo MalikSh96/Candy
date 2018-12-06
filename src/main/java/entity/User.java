@@ -31,7 +31,7 @@ public class User implements Serializable {
 
     private String firstName;
     private String lastName;
-    
+
     @Id
     @Basic(optional = false)
     @NotNull
@@ -42,20 +42,20 @@ public class User implements Serializable {
     @Size(min = 1, max = 255)
     @Column(name = "user_password")
     private String password;
-    
+
     private String phone;
     private String city;
     private String address;
     private int zip;
-    
+
     private int balance;
-    
+
     @JoinTable(name = "user_roles", joinColumns = {
         @JoinColumn(name = "user_email", referencedColumnName = "user_email")}, inverseJoinColumns = {
         @JoinColumn(name = "role_name", referencedColumnName = "role_name")})
     @ManyToMany(cascade = CascadeType.PERSIST)
     private List<Role> roleList = new ArrayList();
-    
+
     @OneToMany(mappedBy = "user")
     private List<UserOrder> userOrder = new ArrayList<>();
     //--------------------------------------------------------------------------
@@ -64,30 +64,34 @@ public class User implements Serializable {
     //Creates and empty instance, makes it so no problems occur
     //An empty constructor is needed to create a new instance via reflection by your persistence framework
     public User() {
+        System.out.println("without nothing");
+
     }
 
     //Used when creating a user, these infos is important to fill out
     public User(String firstName, String lastName, String email, String password, String phone,
             String city, String address, int zip) {
+        System.out.println("ind i contrunce");
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         String salt = BCrypt.gensalt();
         String hash = BCrypt.hashpw(password, salt);
+        System.out.println("hash: " + hash);
         this.password = hash;
         this.phone = phone;
         this.city = city;
         this.address = address;
         this.zip = zip;
     }
-    
+
     public User(String email, String userPass) {
         this.email = email;
         String salt = BCrypt.gensalt();
         String hash = BCrypt.hashpw(userPass, salt);
         this.password = hash;
     }
-    
+
     //--------------------------------------------------------------------------
     //returns roles as strings
     public List<String> getRolesAsStrings() {
@@ -100,15 +104,13 @@ public class User implements Serializable {
         }
         return rolesAsStrings;
     }
-    
-    
+
     //--------------------------------------------------------------------------
     //Password hashing and salting
     public boolean verifyPassword(String pw) {
         return BCrypt.checkpw(pw, password);
     }
 
-    
     //--------------------------------------------------------------------------
     //Getters and setters
     public String getFirstName() {
@@ -143,6 +145,12 @@ public class User implements Serializable {
         this.password = password;
     }
 
+    public void hashpassword() {
+        String salt = BCrypt.gensalt();
+        String hash = BCrypt.hashpw(this.password, salt);
+        this.password = hash;
+    }
+
     public String getPhone() {
         return phone;
     }
@@ -175,7 +183,6 @@ public class User implements Serializable {
         this.zip = zip;
     }
 
-
     public int getBalance() {
         return balance;
     }
@@ -203,12 +210,12 @@ public class User implements Serializable {
     public void addRole(Role userRole) {
         roleList.add(userRole);
     }
-    
+
     //--------------------------------------------------------------------------
     //Java generated codes
-
     @Override
     public String toString() {
-        return "entity.User[ email=" + email + " ]";
+        return "User{" + "firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", password=" + password + ", phone=" + phone + ", city=" + city + ", address=" + address + ", zip=" + zip + '}';
     }
+
 }
